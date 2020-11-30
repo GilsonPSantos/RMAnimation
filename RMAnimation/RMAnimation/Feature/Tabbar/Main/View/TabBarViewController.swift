@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TabBarViewController.swift
 //  RMAnimation
 //
 //  Created by Gilson Santos on 30/11/20.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TabBarViewController: UITabBarController {
+    
+//    let coordinator: TabBarCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        
     }
 
-
 }
-

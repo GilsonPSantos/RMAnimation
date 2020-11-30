@@ -1,5 +1,5 @@
 //
-//  HomeCoordinator.swift
+//  FavoriteService.swift
 //  RMAnimation
 //
 //  Created by Gilson Santos on 30/11/20.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+final class FavoriteService: FavoriteWorkerProtocol {
+    
+}

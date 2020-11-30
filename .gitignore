@@ -90,3 +90,5 @@ fastlane/test_output
 iOSInjectionProject/
 
 RMAnimation/RMAnimation.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+
+.DS_Store

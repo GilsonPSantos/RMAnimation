@@ -16,12 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var coordinator: Coordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let initialTestController = UIViewController()
-        let navigationController = UINavigationController(rootViewController: initialTestController)
-        initialTestController.view.backgroundColor = .yellow
+        let navigation = UINavigationController()
+        let mainCoordinator = TabBarCoordinator(navigationController: navigation)
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = navigationController
+        self.window?.rootViewController = navigation
         self.window?.makeKeyAndVisible()
+        mainCoordinator.start()
         return true
     }
     
