@@ -17,6 +17,7 @@
 		027C7A8E257574A300152575 /* RMAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C7A8D257574A300152575 /* RMAnimationUITests.swift */; };
 		027C7AA3257575DD00152575 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C7AA2257575DD00152575 /* CoordinatorProtocol.swift */; };
 		027C7AA62575760300152575 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C7AA52575760300152575 /* HomeCoordinator.swift */; };
+		029CC6C5257581DC00BA88BB /* PersistentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CC6C4257581DC00BA88BB /* PersistentManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		027C7A8F257574A300152575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027C7AA2257575DD00152575 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		027C7AA52575760300152575 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		029CC6C4257581DC00BA88BB /* PersistentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		027C7A9C2575751F00152575 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				029CC6C3257581CC00BA88BB /* Manager */,
 				027C7A9D2575752800152575 /* DataBase */,
 			);
 			path = CoreData;
@@ -196,6 +199,14 @@
 				027C7AA52575760300152575 /* HomeCoordinator.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		029CC6C3257581CC00BA88BB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				029CC6C4257581DC00BA88BB /* PersistentManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +344,7 @@
 				027C7A692575749D00152575 /* AppDelegate.swift in Sources */,
 				027C7AA3257575DD00152575 /* CoordinatorProtocol.swift in Sources */,
 				027C7A732575749D00152575 /* RMAnimation.xcdatamodeld in Sources */,
+				029CC6C5257581DC00BA88BB /* PersistentManager.swift in Sources */,
 				027C7AA62575760300152575 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
