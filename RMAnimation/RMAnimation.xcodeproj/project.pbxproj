@@ -177,6 +177,45 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		021128832575B91500FE6016 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				029CC6ED2575A08D00BA88BB /* View */,
+				029CC6EC2575A08700BA88BB /* Interactor */,
+				029CC6EB2575A08300BA88BB /* Presenter */,
+				029CC6EA2575A07A00BA88BB /* Coordinator */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		021128842575B93100FE6016 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		021128852575B93700FE6016 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		021128862575B93C00FE6016 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		021128872575B94100FE6016 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		027C7A5C2575749D00152575 = {
 			isa = PBXGroup;
 			children = (
@@ -300,7 +339,6 @@
 			children = (
 				029CC6C7257582AA00BA88BB /* Main */,
 				029CC6C8257582B000BA88BB /* Home */,
-				029CC6CA257582C300BA88BB /* Detail */,
 				029CC6C9257582BA00BA88BB /* Favoite */,
 			);
 			path = Tabbar;
@@ -318,10 +356,8 @@
 		029CC6C8257582B000BA88BB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				029CC6ED2575A08D00BA88BB /* View */,
-				029CC6EC2575A08700BA88BB /* Interactor */,
-				029CC6EB2575A08300BA88BB /* Presenter */,
-				029CC6EA2575A07A00BA88BB /* Coordinator */,
+				021128832575B91500FE6016 /* Main */,
+				029CC6CA257582C300BA88BB /* Detail */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -340,6 +376,10 @@
 		029CC6CA257582C300BA88BB /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				021128872575B94100FE6016 /* View */,
+				021128862575B93C00FE6016 /* Interactor */,
+				021128852575B93700FE6016 /* Presenter */,
+				021128842575B93100FE6016 /* Coordinator */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
