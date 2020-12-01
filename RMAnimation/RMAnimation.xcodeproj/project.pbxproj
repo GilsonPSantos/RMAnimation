@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		027C7A83257574A300152575 /* RMAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C7A82257574A300152575 /* RMAnimationTests.swift */; };
 		027C7A8E257574A300152575 /* RMAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C7A8D257574A300152575 /* RMAnimationUITests.swift */; };
 		027C7AA3257575DD00152575 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C7AA2257575DD00152575 /* CoordinatorProtocol.swift */; };
+		0294DCF22576C293009FD118 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294DCF12576C293009FD118 /* CharacterModel.swift */; };
 		029CC6C5257581DC00BA88BB /* PersistentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CC6C4257581DC00BA88BB /* PersistentManager.swift */; };
 		029CC6E525759C9600BA88BB /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CC6E425759C9600BA88BB /* TabBarCoordinator.swift */; };
 		029CC6E725759D9F00BA88BB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CC6E625759D9E00BA88BB /* TabBarViewController.swift */; };
@@ -91,6 +92,7 @@
 		027C7A8D257574A300152575 /* RMAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAnimationUITests.swift; sourceTree = "<group>"; };
 		027C7A8F257574A300152575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027C7AA2257575DD00152575 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		0294DCF12576C293009FD118 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		029CC6C4257581DC00BA88BB /* PersistentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManager.swift; sourceTree = "<group>"; };
 		029CC6E425759C9600BA88BB /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		029CC6E625759D9E00BA88BB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			children = (
 				027C7A9B2575750800152575 /* Startup */,
 				027C7A9C2575751F00152575 /* CoreData */,
+				0294DCF02576C207009FD118 /* Model */,
 				029CC6EE2575A0C500BA88BB /* Worker */,
 				027C7AA0257575B600152575 /* Coordinator */,
 				027C7A9E2575753200152575 /* Resource */,
@@ -341,6 +344,14 @@
 				027C7AA2257575DD00152575 /* CoordinatorProtocol.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		0294DCF02576C207009FD118 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0294DCF12576C293009FD118 /* CharacterModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		029CC6C3257581CC00BA88BB /* Manager */ = {
@@ -502,7 +513,6 @@
 				941C83A6D5E4D23575F72E25 /* Pods-RMAnimationTests.debug.xcconfig */,
 				93BD104EE8CC79DD8BC74962 /* Pods-RMAnimationTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -757,6 +767,7 @@
 				029CC7022575A10400BA88BB /* HomeViewController.swift in Sources */,
 				021128652575AD3C00FE6016 /* HomeService.swift in Sources */,
 				021128712575B38E00FE6016 /* FavoriteCoordinator.swift in Sources */,
+				0294DCF22576C293009FD118 /* CharacterModel.swift in Sources */,
 				027C7A732575749D00152575 /* RMAnimation.xcdatamodeld in Sources */,
 				029CC6E925759F8D00BA88BB /* TabBarCoordinatorProtocol.swift in Sources */,
 				029CC6E725759D9F00BA88BB /* TabBarViewController.swift in Sources */,

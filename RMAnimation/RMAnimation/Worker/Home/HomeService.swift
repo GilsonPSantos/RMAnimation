@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import NetworkMD
 
 final class HomeService: HomeWorkerProtocol {
-    
+    func getCharacter(url: String, _ completion: @escaping (Result<Data, ErrorNetwork>) -> Void) {
+        
+    }
 }
