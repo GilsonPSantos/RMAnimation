@@ -1,0 +1,6 @@
+framework module NetworkMD {
+  umbrella header "NetworkMD-umbrella.h"
+
+  export *
+  module * { export * }
+}

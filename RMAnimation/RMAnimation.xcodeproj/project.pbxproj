@@ -42,6 +42,9 @@
 		029CC7052575A10400BA88BB /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CC6FA2575A10400BA88BB /* HomeViewProtocol.swift */; };
 		029CC7062575A10400BA88BB /* HomeViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CC6FB2575A10400BA88BB /* HomeViewData.swift */; };
 		029CC7072575A10400BA88BB /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CC6FC2575A10400BA88BB /* HomeEntity.swift */; };
+		2D8A5B96490178093843A3D2 /* Pods_RMAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF6F4469406E62A367AEA72 /* Pods_RMAnimationTests.framework */; };
+		3A3968230BEE5110E5B62268 /* Pods_RMAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */; };
+		A4B09D913FCE0198BFA44573 /* Pods_RMAnimation_RMAnimationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39D862AE5ACFC15090BA0DA /* Pods_RMAnimation_RMAnimationUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,15 @@
 		029CC6FA2575A10400BA88BB /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
 		029CC6FB2575A10400BA88BB /* HomeViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewData.swift; sourceTree = "<group>"; };
 		029CC6FC2575A10400BA88BB /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		081C69FF5950F5105075A55A /* Pods-RMAnimation-RMAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0855705EAB73F4550729706C /* Pods-RMAnimation-RMAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D33426DFA258977FCE4BE67 /* Pods-RMAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation.release.xcconfig"; path = "Target Support Files/Pods-RMAnimation/Pods-RMAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		8BF6F4469406E62A367AEA72 /* Pods_RMAnimationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMAnimationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BD104EE8CC79DD8BC74962 /* Pods-RMAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimationTests.release.xcconfig"; path = "Target Support Files/Pods-RMAnimationTests/Pods-RMAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
+		941C83A6D5E4D23575F72E25 /* Pods-RMAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimationTests.debug.xcconfig"; path = "Target Support Files/Pods-RMAnimationTests/Pods-RMAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B39D862AE5ACFC15090BA0DA /* Pods_RMAnimation_RMAnimationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMAnimation_RMAnimationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA26588AD1C6BCEC88E5C798 /* Pods-RMAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation.debug.xcconfig"; path = "Target Support Files/Pods-RMAnimation/Pods-RMAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A3968230BEE5110E5B62268 /* Pods_RMAnimation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8A5B96490178093843A3D2 /* Pods_RMAnimationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B09D913FCE0198BFA44573 /* Pods_RMAnimation_RMAnimationUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +238,8 @@
 				027C7A81257574A300152575 /* RMAnimationTests */,
 				027C7A8C257574A300152575 /* RMAnimationUITests */,
 				027C7A662575749D00152575 /* Products */,
+				9F857BCC44A6D20018990A7C /* Pods */,
+				6AA6547E4953DF8440C7137F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -465,6 +482,30 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		6AA6547E4953DF8440C7137F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */,
+				B39D862AE5ACFC15090BA0DA /* Pods_RMAnimation_RMAnimationUITests.framework */,
+				8BF6F4469406E62A367AEA72 /* Pods_RMAnimationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F857BCC44A6D20018990A7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA26588AD1C6BCEC88E5C798 /* Pods-RMAnimation.debug.xcconfig */,
+				6D33426DFA258977FCE4BE67 /* Pods-RMAnimation.release.xcconfig */,
+				0855705EAB73F4550729706C /* Pods-RMAnimation-RMAnimationUITests.debug.xcconfig */,
+				081C69FF5950F5105075A55A /* Pods-RMAnimation-RMAnimationUITests.release.xcconfig */,
+				941C83A6D5E4D23575F72E25 /* Pods-RMAnimationTests.debug.xcconfig */,
+				93BD104EE8CC79DD8BC74962 /* Pods-RMAnimationTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -472,9 +513,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 027C7A92257574A300152575 /* Build configuration list for PBXNativeTarget "RMAnimation" */;
 			buildPhases = (
+				16C00FB7AA2AEA9C33514DB2 /* [CP] Check Pods Manifest.lock */,
 				027C7A612575749D00152575 /* Sources */,
 				027C7A622575749D00152575 /* Frameworks */,
 				027C7A632575749D00152575 /* Resources */,
+				EC62EA410681256FC96F5F79 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -489,6 +532,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 027C7A95257574A300152575 /* Build configuration list for PBXNativeTarget "RMAnimationTests" */;
 			buildPhases = (
+				DAD9BF04A5D1E086D45D8761 /* [CP] Check Pods Manifest.lock */,
 				027C7A7A257574A300152575 /* Sources */,
 				027C7A7B257574A300152575 /* Frameworks */,
 				027C7A7C257574A300152575 /* Resources */,
@@ -507,9 +551,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 027C7A98257574A300152575 /* Build configuration list for PBXNativeTarget "RMAnimationUITests" */;
 			buildPhases = (
+				081602EB7CC96D5B6C33BE3B /* [CP] Check Pods Manifest.lock */,
 				027C7A85257574A300152575 /* Sources */,
 				027C7A86257574A300152575 /* Frameworks */,
 				027C7A87257574A300152575 /* Resources */,
+				3C58E3768BF6BE882E1D86F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -589,6 +635,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		081602EB7CC96D5B6C33BE3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RMAnimation-RMAnimationUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16C00FB7AA2AEA9C33514DB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RMAnimation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C58E3768BF6BE882E1D86F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAD9BF04A5D1E086D45D8761 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RMAnimationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC62EA410681256FC96F5F79 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RMAnimation/Pods-RMAnimation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RMAnimation/Pods-RMAnimation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RMAnimation/Pods-RMAnimation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		027C7A612575749D00152575 /* Sources */ = {
@@ -788,6 +937,7 @@
 		};
 		027C7A93257574A300152575 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA26588AD1C6BCEC88E5C798 /* Pods-RMAnimation.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -807,6 +957,7 @@
 		};
 		027C7A94257574A300152575 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D33426DFA258977FCE4BE67 /* Pods-RMAnimation.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -826,6 +977,7 @@
 		};
 		027C7A96257574A300152575 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 941C83A6D5E4D23575F72E25 /* Pods-RMAnimationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -848,6 +1000,7 @@
 		};
 		027C7A97257574A300152575 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93BD104EE8CC79DD8BC74962 /* Pods-RMAnimationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -870,6 +1023,7 @@
 		};
 		027C7A99257574A300152575 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0855705EAB73F4550729706C /* Pods-RMAnimation-RMAnimationUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -890,6 +1044,7 @@
 		};
 		027C7A9A257574A300152575 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 081C69FF5950F5105075A55A /* Pods-RMAnimation-RMAnimationUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
