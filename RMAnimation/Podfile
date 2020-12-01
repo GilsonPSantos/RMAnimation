@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '13.7'
+
+target 'RMAnimation' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'NetworkMD', :git => 'https://gilsonsantosti@bitbucket.org/gilsonsantosti/networkmd.git'
+
+  target 'RMAnimationTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'RMAnimationUITests' do
+    # Pods for testing
+  end
+
+end
