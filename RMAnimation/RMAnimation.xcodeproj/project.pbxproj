@@ -43,6 +43,10 @@
 		029CC7052575A10400BA88BB /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CC6FA2575A10400BA88BB /* HomeViewProtocol.swift */; };
 		029CC7062575A10400BA88BB /* HomeViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CC6FB2575A10400BA88BB /* HomeViewData.swift */; };
 		029CC7072575A10400BA88BB /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CC6FC2575A10400BA88BB /* HomeEntity.swift */; };
+		02C8B0982576EA2E003DE2E0 /* ScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0972576EA2E003DE2E0 /* ScreenViewProtocol.swift */; };
+		02C8B09D2576EA9A003DE2E0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B09C2576EA9A003DE2E0 /* Reachability.swift */; };
+		02C8B0A02576EADC003DE2E0 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B09F2576EADC003DE2E0 /* UserDefaultHelper.swift */; };
+		02C8B0A32576EB21003DE2E0 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0A22576EB21003DE2E0 /* UIImageViewExtension.swift */; };
 		2D8A5B96490178093843A3D2 /* Pods_RMAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF6F4469406E62A367AEA72 /* Pods_RMAnimationTests.framework */; };
 		3A3968230BEE5110E5B62268 /* Pods_RMAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */; };
 		A4B09D913FCE0198BFA44573 /* Pods_RMAnimation_RMAnimationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39D862AE5ACFC15090BA0DA /* Pods_RMAnimation_RMAnimationUITests.framework */; };
@@ -108,6 +112,10 @@
 		029CC6FA2575A10400BA88BB /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
 		029CC6FB2575A10400BA88BB /* HomeViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewData.swift; sourceTree = "<group>"; };
 		029CC6FC2575A10400BA88BB /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		02C8B0972576EA2E003DE2E0 /* ScreenViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewProtocol.swift; sourceTree = "<group>"; };
+		02C8B09C2576EA9A003DE2E0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		02C8B09F2576EADC003DE2E0 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
+		02C8B0A22576EB21003DE2E0 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		081C69FF5950F5105075A55A /* Pods-RMAnimation-RMAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0855705EAB73F4550729706C /* Pods-RMAnimation-RMAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -260,6 +268,8 @@
 			children = (
 				027C7A9B2575750800152575 /* Startup */,
 				027C7A9C2575751F00152575 /* CoreData */,
+				02C8B09A2576EA79003DE2E0 /* Helper */,
+				02C8B0962576EA06003DE2E0 /* Common */,
 				0294DCF02576C207009FD118 /* Model */,
 				029CC6EE2575A0C500BA88BB /* Worker */,
 				027C7AA0257575B600152575 /* Coordinator */,
@@ -491,6 +501,56 @@
 				021128642575AD3C00FE6016 /* HomeService.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		02C8B0962576EA06003DE2E0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				02C8B0992576EA5A003DE2E0 /* ScreenProtocol */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		02C8B0992576EA5A003DE2E0 /* ScreenProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				02C8B0972576EA2E003DE2E0 /* ScreenViewProtocol.swift */,
+			);
+			path = ScreenProtocol;
+			sourceTree = "<group>";
+		};
+		02C8B09A2576EA79003DE2E0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				02C8B0A12576EB08003DE2E0 /* Extension */,
+				02C8B09E2576EAC7003DE2E0 /* UserDefaultHelper */,
+				02C8B09B2576EA8F003DE2E0 /* Reachability */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		02C8B09B2576EA8F003DE2E0 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				02C8B09C2576EA9A003DE2E0 /* Reachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		02C8B09E2576EAC7003DE2E0 /* UserDefaultHelper */ = {
+			isa = PBXGroup;
+			children = (
+				02C8B09F2576EADC003DE2E0 /* UserDefaultHelper.swift */,
+			);
+			path = UserDefaultHelper;
+			sourceTree = "<group>";
+		};
+		02C8B0A12576EB08003DE2E0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				02C8B0A22576EB21003DE2E0 /* UIImageViewExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		6AA6547E4953DF8440C7137F /* Frameworks */ = {
@@ -760,6 +820,7 @@
 				029CC7012575A10400BA88BB /* HomePresenterProtocol.swift in Sources */,
 				029CC7042575A10400BA88BB /* HomeInteractor.swift in Sources */,
 				029CC6FD2575A10400BA88BB /* HomeCoordinator.swift in Sources */,
+				02C8B09D2576EA9A003DE2E0 /* Reachability.swift in Sources */,
 				021128782575B38E00FE6016 /* FavoriteInteractor.swift in Sources */,
 				021128772575B38E00FE6016 /* FavoriteWorkerProtocol.swift in Sources */,
 				029CC6E525759C9600BA88BB /* TabBarCoordinator.swift in Sources */,
@@ -767,7 +828,10 @@
 				029CC7022575A10400BA88BB /* HomeViewController.swift in Sources */,
 				021128652575AD3C00FE6016 /* HomeService.swift in Sources */,
 				021128712575B38E00FE6016 /* FavoriteCoordinator.swift in Sources */,
+				02C8B0A32576EB21003DE2E0 /* UIImageViewExtension.swift in Sources */,
+				02C8B0982576EA2E003DE2E0 /* ScreenViewProtocol.swift in Sources */,
 				0294DCF22576C293009FD118 /* CharacterModel.swift in Sources */,
+				02C8B0A02576EADC003DE2E0 /* UserDefaultHelper.swift in Sources */,
 				027C7A732575749D00152575 /* RMAnimation.xcdatamodeld in Sources */,
 				029CC6E925759F8D00BA88BB /* TabBarCoordinatorProtocol.swift in Sources */,
 				029CC6E725759D9F00BA88BB /* TabBarViewController.swift in Sources */,
