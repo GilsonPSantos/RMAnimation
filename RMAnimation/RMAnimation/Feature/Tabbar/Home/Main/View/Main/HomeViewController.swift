@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     // MARK: OUTLETS
     
     // MARK: CONSTANTS
-    
+    let homeScreen = HomeScreen()
     // MARK: VARIABLES
     var interactor: HomeInteractorProtocol?
     private lazy var viewData: HomeViewData = HomeViewData()
@@ -26,11 +26,33 @@ extension HomeViewController {
     
     override func loadView() {
         super.loadView()
-        
+        self.view = self.homeScreen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.homeScreen.homeTableView.dataSource = self
+        self.homeScreen.homeTableView.delegate = self
+    }
+}
+
+//MARK: - TABLEVIEW DATASOURCE -
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.backgroundColor = .blue
+        return cell
+    }
+}
+
+//MARK: - TABLEVIEW DELEGATE -
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
 
