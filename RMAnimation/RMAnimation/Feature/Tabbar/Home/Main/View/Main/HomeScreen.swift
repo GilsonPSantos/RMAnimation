@@ -39,7 +39,7 @@ extension HomeScreen: ScreenViewProtocol {
     }
     
     func setupAdditional() {
-        self.homeTableView.backgroundColor = .brown
+        self.homeTableView.backgroundColor = .systemBackground
     }
 
 }

@@ -33,6 +33,7 @@ extension HomeViewController {
         super.viewDidLoad()
         self.homeScreen.homeTableView.dataSource = self
         self.homeScreen.homeTableView.delegate = self
+        self.registerCell()
     }
 }
 
@@ -43,8 +44,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = .blue
+        let cell = self.homeScreen.homeTableView.dequeueReusableCell(withIdentifier: CharacterTableViewCell.CELL_ID) as! CharacterTableViewCell
         return cell
     }
 }
@@ -63,5 +63,7 @@ extension HomeViewController: HomeViewProtocol {
 
 //MARK: - AUX METHODS -
 extension HomeViewController {
- 
+    private func registerCell() {
+        self.homeScreen.homeTableView.register(CharacterTableViewCell.self, forCellReuseIdentifier: CharacterTableViewCell.CELL_ID)
+    }
 }

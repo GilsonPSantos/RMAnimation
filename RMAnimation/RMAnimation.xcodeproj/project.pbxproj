@@ -49,6 +49,8 @@
 		02C8B0A32576EB21003DE2E0 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0A22576EB21003DE2E0 /* UIImageViewExtension.swift */; };
 		02C8B0AC2576F458003DE2E0 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0AB2576F458003DE2E0 /* HomeScreen.swift */; };
 		02C8B0AE2576FBB5003DE2E0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0AD2576FBB5003DE2E0 /* UIViewExtension.swift */; };
+		02C8B0B02576FCC3003DE2E0 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0AF2576FCC3003DE2E0 /* CharacterTableViewCell.swift */; };
+		02C8B0B22576FCE3003DE2E0 /* CharacterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0B12576FCE3003DE2E0 /* CharacterScreen.swift */; };
 		2D8A5B96490178093843A3D2 /* Pods_RMAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF6F4469406E62A367AEA72 /* Pods_RMAnimationTests.framework */; };
 		3A3968230BEE5110E5B62268 /* Pods_RMAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */; };
 		A4B09D913FCE0198BFA44573 /* Pods_RMAnimation_RMAnimationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39D862AE5ACFC15090BA0DA /* Pods_RMAnimation_RMAnimationUITests.framework */; };
@@ -120,6 +122,8 @@
 		02C8B0A22576EB21003DE2E0 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		02C8B0AB2576F458003DE2E0 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		02C8B0AD2576FBB5003DE2E0 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		02C8B0AF2576FCC3003DE2E0 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		02C8B0B12576FCE3003DE2E0 /* CharacterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterScreen.swift; sourceTree = "<group>"; };
 		039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		081C69FF5950F5105075A55A /* Pods-RMAnimation-RMAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0855705EAB73F4550729706C /* Pods-RMAnimation-RMAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -467,7 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				02C8B0A92576F41C003DE2E0 /* Main */,
-				02C8B0AA2576F427003DE2E0 /* HomeCell */,
+				02C8B0AA2576F427003DE2E0 /* CharacterCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -568,11 +572,13 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		02C8B0AA2576F427003DE2E0 /* HomeCell */ = {
+		02C8B0AA2576F427003DE2E0 /* CharacterCell */ = {
 			isa = PBXGroup;
 			children = (
+				02C8B0AF2576FCC3003DE2E0 /* CharacterTableViewCell.swift */,
+				02C8B0B12576FCE3003DE2E0 /* CharacterScreen.swift */,
 			);
-			path = HomeCell;
+			path = CharacterCell;
 			sourceTree = "<group>";
 		};
 		6AA6547E4953DF8440C7137F /* Frameworks */ = {
@@ -850,12 +856,14 @@
 				029CC7022575A10400BA88BB /* HomeViewController.swift in Sources */,
 				021128652575AD3C00FE6016 /* HomeService.swift in Sources */,
 				021128712575B38E00FE6016 /* FavoriteCoordinator.swift in Sources */,
+				02C8B0B02576FCC3003DE2E0 /* CharacterTableViewCell.swift in Sources */,
 				02C8B0A32576EB21003DE2E0 /* UIImageViewExtension.swift in Sources */,
 				02C8B0982576EA2E003DE2E0 /* ScreenViewProtocol.swift in Sources */,
 				0294DCF22576C293009FD118 /* CharacterModel.swift in Sources */,
 				02C8B0A02576EADC003DE2E0 /* UserDefaultHelper.swift in Sources */,
 				027C7A732575749D00152575 /* RMAnimation.xcdatamodeld in Sources */,
 				029CC6E925759F8D00BA88BB /* TabBarCoordinatorProtocol.swift in Sources */,
+				02C8B0B22576FCE3003DE2E0 /* CharacterScreen.swift in Sources */,
 				029CC6E725759D9F00BA88BB /* TabBarViewController.swift in Sources */,
 				0211287B2575B38E00FE6016 /* FavoriteEntity.swift in Sources */,
 				029CC6C5257581DC00BA88BB /* PersistentManager.swift in Sources */,
