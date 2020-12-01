@@ -11,5 +11,5 @@ import NetworkMD
 
 //MARK: - WORKER PROTOCOL -
 protocol HomeWorkerProtocol: class {
-    func getCharacter(url: String,  _ completion: @escaping (Result<Data, ErrorNetwork>) -> Void)
+    func getCharacter(url: String,  _ completion: @escaping (Result<CharacterModel, ErrorNetwork>) -> Void)
 }
