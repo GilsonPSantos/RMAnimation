@@ -19,6 +19,7 @@ final class HomeService: HomeWorkerProtocol {
     }
     
     func getCharacter(url: String, _ completion: @escaping (Result<CharacterModel, ErrorNetwork>) -> Void) {
+        guard Reachability.isConnectedToNetwork() else { completion(.failure(.notNetwork)); return }
         self.configuration.baseUrl = url
         self.service.request(configuration: self.configuration) { (result) in
             switch result {

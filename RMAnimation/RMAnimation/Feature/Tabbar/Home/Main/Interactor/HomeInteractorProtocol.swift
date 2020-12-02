@@ -10,5 +10,5 @@ import Foundation
 
 //MARK: - INTERACTOR PROTOCOL -
 protocol HomeInteractorProtocol: class {
-    
+    func getCharacter(request: HomeRequest)
 }

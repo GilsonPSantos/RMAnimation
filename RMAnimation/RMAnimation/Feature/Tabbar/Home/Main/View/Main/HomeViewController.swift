@@ -34,17 +34,19 @@ extension HomeViewController {
         self.homeScreen.homeTableView.dataSource = self
         self.homeScreen.homeTableView.delegate = self
         self.registerCell()
+        self.setupService()
     }
 }
 
 //MARK: - TABLEVIEW DATASOURCE -
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.viewData.characters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.homeScreen.homeTableView.dequeueReusableCell(withIdentifier: CharacterTableViewCell.CELL_ID) as! CharacterTableViewCell
+        
         return cell
     }
 }
@@ -58,12 +60,27 @@ extension HomeViewController: UITableViewDelegate {
 
 //MARK: - VIEW PROTOCOL -
 extension HomeViewController: HomeViewProtocol {
+    func showLoading() {
+        print("loading")
+    }
     
+    func showSuccess(viewData: HomeViewData) {
+        self.viewData = viewData
+        self.homeScreen.homeTableView.reloadData()
+    }
+    
+    func showError() {
+        print("error")
+    }
 }
 
 //MARK: - AUX METHODS -
 extension HomeViewController {
     private func registerCell() {
         self.homeScreen.homeTableView.register(CharacterTableViewCell.self, forCellReuseIdentifier: CharacterTableViewCell.CELL_ID)
+    }
+    
+    private func setupService() {
+        self.interactor?.getCharacter(request: HomeRequest(url: "https://rickandmortyapi.com/api/character?page=1"))
     }
 }

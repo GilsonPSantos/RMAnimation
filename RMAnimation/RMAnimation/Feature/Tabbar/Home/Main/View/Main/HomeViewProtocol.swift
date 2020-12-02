@@ -10,6 +10,8 @@ import Foundation
 
 //MARK: - VIEW PROTOCOL -
 protocol HomeViewProtocol: class {
-    
+    func showLoading()
+    func showSuccess(viewData: HomeViewData)
+    func showError()
 }
 

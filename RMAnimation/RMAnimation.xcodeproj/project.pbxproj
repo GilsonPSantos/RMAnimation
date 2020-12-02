@@ -51,6 +51,8 @@
 		02C8B0AE2576FBB5003DE2E0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0AD2576FBB5003DE2E0 /* UIViewExtension.swift */; };
 		02C8B0B02576FCC3003DE2E0 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0AF2576FCC3003DE2E0 /* CharacterTableViewCell.swift */; };
 		02C8B0B22576FCE3003DE2E0 /* CharacterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0B12576FCE3003DE2E0 /* CharacterScreen.swift */; };
+		02C8B0B62577168E003DE2E0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0B52577168E003DE2E0 /* StringExtension.swift */; };
+		02C8B0B825771B7B003DE2E0 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0B725771B7B003DE2E0 /* DateExtension.swift */; };
 		2D8A5B96490178093843A3D2 /* Pods_RMAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF6F4469406E62A367AEA72 /* Pods_RMAnimationTests.framework */; };
 		3A3968230BEE5110E5B62268 /* Pods_RMAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */; };
 		A4B09D913FCE0198BFA44573 /* Pods_RMAnimation_RMAnimationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39D862AE5ACFC15090BA0DA /* Pods_RMAnimation_RMAnimationUITests.framework */; };
@@ -124,6 +126,8 @@
 		02C8B0AD2576FBB5003DE2E0 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		02C8B0AF2576FCC3003DE2E0 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		02C8B0B12576FCE3003DE2E0 /* CharacterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterScreen.swift; sourceTree = "<group>"; };
+		02C8B0B52577168E003DE2E0 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		02C8B0B725771B7B003DE2E0 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		081C69FF5950F5105075A55A /* Pods-RMAnimation-RMAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0855705EAB73F4550729706C /* Pods-RMAnimation-RMAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -558,6 +562,8 @@
 			children = (
 				02C8B0A22576EB21003DE2E0 /* UIImageViewExtension.swift */,
 				02C8B0AD2576FBB5003DE2E0 /* UIViewExtension.swift */,
+				02C8B0B52577168E003DE2E0 /* StringExtension.swift */,
+				02C8B0B725771B7B003DE2E0 /* DateExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -843,6 +849,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0211287A2575B38E00FE6016 /* FavoriteViewData.swift in Sources */,
+				02C8B0B825771B7B003DE2E0 /* DateExtension.swift in Sources */,
 				027C7A692575749D00152575 /* AppDelegate.swift in Sources */,
 				027C7AA3257575DD00152575 /* CoordinatorProtocol.swift in Sources */,
 				029CC7012575A10400BA88BB /* HomePresenterProtocol.swift in Sources */,
@@ -879,6 +886,7 @@
 				02C8B0AE2576FBB5003DE2E0 /* UIViewExtension.swift in Sources */,
 				021128752575B38E00FE6016 /* FavoritePresenterProtocol.swift in Sources */,
 				029CC7052575A10400BA88BB /* HomeViewProtocol.swift in Sources */,
+				02C8B0B62577168E003DE2E0 /* StringExtension.swift in Sources */,
 				021128812575B4C000FE6016 /* FavoriteService.swift in Sources */,
 				021128732575B38E00FE6016 /* FavoritePresenter.swift in Sources */,
 				029CC7032575A10400BA88BB /* HomeWorkerProtocol.swift in Sources */,

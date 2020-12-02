@@ -10,6 +10,8 @@ import Foundation
 
 //MARK: - PRESENTER PROTOCOL -
 protocol HomePresenterProtocol: class {
-    
+    func startRequest()
+    func handlerSuccess(response: HomeResponse)
+    func handlerError()
 }
 
