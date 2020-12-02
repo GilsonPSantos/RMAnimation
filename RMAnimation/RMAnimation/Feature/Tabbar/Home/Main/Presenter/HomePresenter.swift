@@ -20,10 +20,27 @@ final class HomePresenter {
 
 //MARK: - PRESENTER PROTOCOL -
 extension HomePresenter: HomePresenterProtocol {
+    func startRequest() {
+        self.view?.showLoading()
+    }
     
+    func handlerSuccess(response: HomeResponse) {
+        let viewData = self.createViewData(response)
+        self.view?.showSuccess(viewData: viewData)
+    }
+    
+    func handlerError() {
+        self.view?.showError()
+    }
 }
 
 //MARK: - AUX METHODS -
 extension HomePresenter {
-    
+    private func createViewData(_ response: HomeResponse) -> HomeViewData {
+        var viewData = HomeViewData(isFinish: response.isLastPage, nextPage: response.nextPage)
+        viewData.characters = response.characters.map({
+            return CharacterViewData(id: $0.id, name: $0.name, creationDate: "Criado em " + $0.creationDate.convertDateToStringDDMMYYYY(), imageUrl: $0.urlImage)
+        })
+         return viewData
+    }
 }

@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = navigation
         self.window?.makeKeyAndVisible()
         mainCoordinator.start()
+        self.coordinator = mainCoordinator
         return true
     }
     

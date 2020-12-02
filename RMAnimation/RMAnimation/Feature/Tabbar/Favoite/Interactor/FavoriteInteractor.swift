@@ -12,7 +12,7 @@ import Foundation
 final class FavoriteInteractor {
     
     private let worker: FavoriteWorkerProtocol
-    private weak var presenter: FavoritePresenterProtocol?
+    private let presenter: FavoritePresenterProtocol?
     
     init(worker: FavoriteWorkerProtocol, presenter: FavoritePresenterProtocol) {
         self.worker = worker

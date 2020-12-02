@@ -10,6 +10,7 @@ import UIKit
 
 //MARK: - COORDINATOR CLASS -
 final class FavoriteCoordinator: FavoriteCoordinatorProtocol {
+    
     var childCoordinators: [Coordinator] = []
     
     var navigationController: UINavigationController
@@ -32,6 +33,7 @@ final class FavoriteCoordinator: FavoriteCoordinatorProtocol {
         
     }
     
-    
-
+    func childDidFinish(_ child: Coordinator?) {
+        self.childCoordinators.removeAll(where: {$0 === child})
+    }
 }

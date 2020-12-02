@@ -10,5 +10,14 @@ import Foundation
 
 //MARK: - STRUCT VIEW DATA -
 struct HomeViewData {
-    
+    var isFinish = false
+    var nextPage = ""
+    var characters = [CharacterViewData]()
+}
+
+struct CharacterViewData {
+    let id: Int
+    let name: String
+    let creationDate: String
+    let imageUrl: String
 }

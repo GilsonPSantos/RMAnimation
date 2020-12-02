@@ -1,0 +1,6 @@
+framework module Pods_RMAnimation {
+  umbrella header "Pods-RMAnimation-umbrella.h"
+
+  export *
+  module * { export * }
+}
