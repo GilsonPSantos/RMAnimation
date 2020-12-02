@@ -65,7 +65,8 @@ extension HomeViewController: UITableViewDataSource {
 //MARK: - TABLEVIEW DELEGATE -
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let characterRow = self.viewData.characters[indexPath.row]
+        self.coordinator?.showDetail(id: characterRow.id, characterName: characterRow.name)
     }
 }
 

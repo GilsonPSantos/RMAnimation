@@ -10,6 +10,6 @@ import Foundation
 
 
 //MARK: - COORDINATOR PROTOCOL -
-protocol FavoriteCoordinatorProtocol: Coordinator {
+protocol FavoriteCoordinatorProtocol: MainCoordinator {
     
 }

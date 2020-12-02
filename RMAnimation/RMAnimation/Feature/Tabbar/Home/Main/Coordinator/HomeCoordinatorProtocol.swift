@@ -10,6 +10,6 @@ import Foundation
 
 
 //MARK: - COORDINATOR PROTOCOL -
-protocol HomeCoordinatorProtocol: Coordinator {
-    
+protocol HomeCoordinatorProtocol: MainCoordinator {
+    func showDetail(id: Int, characterName: String)
 }
