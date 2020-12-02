@@ -20,8 +20,8 @@ class CharacterScreen: UIView {
     
     let labelName: UILabel = {
         let label = UILabel()
-        label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 14)
+        label.textColor = .systemOrange
+        label.font = .boldSystemFont(ofSize: 16)
         label.textAlignment = .left
         label.numberOfLines = 1
         return label
@@ -29,8 +29,8 @@ class CharacterScreen: UIView {
     
     let labelDate: UILabel = {
         let label = UILabel()
-        label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 14)
+        label.textColor = .systemOrange
+        label.font = .systemFont(ofSize: 12)
         label.textAlignment = .left
         label.numberOfLines = 1
         return label
@@ -40,7 +40,8 @@ class CharacterScreen: UIView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.isAccessibilityElement = true
-        imageView.backgroundColor = .yellow
+        imageView.tintColor = .systemOrange
+        imageView.image = UIImage(systemName: "chevron.right")
         return imageView
     }()
 
@@ -66,11 +67,11 @@ extension CharacterScreen: ScreenViewProtocol {
     }
     
     func setupConstraints() {
-        self.imageCharacter.addConstraint(to: self, leading: 0, top: 0, bottom: 0, width: 60, height: 60)
-        self.imageArrow.addConstraint(to: self, trailing: 0, width: 15, height: 15)
+        self.imageCharacter.addConstraint(to: self, leading: 0, top: 0, bottom: 0, width: 80, height: 80)
+        self.imageArrow.addConstraint(to: self, trailing: 10, width: 15, height: 15)
         self.imageArrow.addConstraint(to: self, centerVertically: true)
-        self.labelName.addConstraint(to: self, top: 0)
-        self.labelDate.addConstraint(to: self, bottom: 0)
+        self.labelName.addConstraint(to: self, top: 10)
+        self.labelDate.addConstraint(to: self, bottom: 10)
         NSLayoutConstraint.activate([
             self.labelName.leadingAnchor.constraint(equalTo: self.imageCharacter.trailingAnchor, constant: 10),
             self.labelName.trailingAnchor.constraint(equalTo: self.imageArrow.leadingAnchor, constant: -5),
@@ -83,5 +84,6 @@ extension CharacterScreen: ScreenViewProtocol {
     func setupAdditional() {
         self.imageCharacter.layer.masksToBounds = true
         self.imageCharacter.layer.cornerRadius = 6
+        self.backgroundColor = .black
     }
 }

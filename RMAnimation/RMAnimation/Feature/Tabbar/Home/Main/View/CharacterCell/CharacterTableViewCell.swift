@@ -31,12 +31,12 @@ extension CharacterTableViewCell: ScreenViewProtocol {
     }
     
     func setupConstraints() {
-        self.characterScreen.addConstraint(to: self.contentView, leading: 10, trailing: 10, top: 10, bottom: 10)
+        self.characterScreen.addConstraint(to: self.contentView, leading: 5, trailing: 5, top: 2, bottom: 2)
     }
     
     func setupAdditional() {
         self.selectionStyle = .none
-        self.backgroundColor = .gray
+        self.backgroundColor = .darkGray
     }
 }
 
