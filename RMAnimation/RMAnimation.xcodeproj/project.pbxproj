@@ -53,6 +53,8 @@
 		02C8B0B22576FCE3003DE2E0 /* CharacterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0B12576FCE3003DE2E0 /* CharacterScreen.swift */; };
 		02C8B0B62577168E003DE2E0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0B52577168E003DE2E0 /* StringExtension.swift */; };
 		02C8B0B825771B7B003DE2E0 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0B725771B7B003DE2E0 /* DateExtension.swift */; };
+		02C8B0BD2577FA70003DE2E0 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0BC2577FA70003DE2E0 /* LoadingScreen.swift */; };
+		02C8B0BF2577FAA9003DE2E0 /* ErrorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0BE2577FAA9003DE2E0 /* ErrorScreen.swift */; };
 		2D8A5B96490178093843A3D2 /* Pods_RMAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF6F4469406E62A367AEA72 /* Pods_RMAnimationTests.framework */; };
 		3A3968230BEE5110E5B62268 /* Pods_RMAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */; };
 		A4B09D913FCE0198BFA44573 /* Pods_RMAnimation_RMAnimationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39D862AE5ACFC15090BA0DA /* Pods_RMAnimation_RMAnimationUITests.framework */; };
@@ -128,6 +130,8 @@
 		02C8B0B12576FCE3003DE2E0 /* CharacterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterScreen.swift; sourceTree = "<group>"; };
 		02C8B0B52577168E003DE2E0 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		02C8B0B725771B7B003DE2E0 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		02C8B0BC2577FA70003DE2E0 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		02C8B0BE2577FAA9003DE2E0 /* ErrorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorScreen.swift; sourceTree = "<group>"; };
 		039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		081C69FF5950F5105075A55A /* Pods-RMAnimation-RMAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0855705EAB73F4550729706C /* Pods-RMAnimation-RMAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -518,6 +522,8 @@
 		02C8B0962576EA06003DE2E0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				02C8B0BB2577FA54003DE2E0 /* ErrorScreen */,
+				02C8B0BA2577FA48003DE2E0 /* LoadingScreen */,
 				02C8B0992576EA5A003DE2E0 /* ScreenProtocol */,
 			);
 			path = Common;
@@ -585,6 +591,22 @@
 				02C8B0B12576FCE3003DE2E0 /* CharacterScreen.swift */,
 			);
 			path = CharacterCell;
+			sourceTree = "<group>";
+		};
+		02C8B0BA2577FA48003DE2E0 /* LoadingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				02C8B0BC2577FA70003DE2E0 /* LoadingScreen.swift */,
+			);
+			path = LoadingScreen;
+			sourceTree = "<group>";
+		};
+		02C8B0BB2577FA54003DE2E0 /* ErrorScreen */ = {
+			isa = PBXGroup;
+			children = (
+				02C8B0BE2577FAA9003DE2E0 /* ErrorScreen.swift */,
+			);
+			path = ErrorScreen;
 			sourceTree = "<group>";
 		};
 		6AA6547E4953DF8440C7137F /* Frameworks */ = {
@@ -866,9 +888,11 @@
 				02C8B0B02576FCC3003DE2E0 /* CharacterTableViewCell.swift in Sources */,
 				02C8B0A32576EB21003DE2E0 /* UIImageViewExtension.swift in Sources */,
 				02C8B0982576EA2E003DE2E0 /* ScreenViewProtocol.swift in Sources */,
+				02C8B0BF2577FAA9003DE2E0 /* ErrorScreen.swift in Sources */,
 				0294DCF22576C293009FD118 /* CharacterModel.swift in Sources */,
 				02C8B0A02576EADC003DE2E0 /* UserDefaultHelper.swift in Sources */,
 				027C7A732575749D00152575 /* RMAnimation.xcdatamodeld in Sources */,
+				02C8B0BD2577FA70003DE2E0 /* LoadingScreen.swift in Sources */,
 				029CC6E925759F8D00BA88BB /* TabBarCoordinatorProtocol.swift in Sources */,
 				02C8B0B22576FCE3003DE2E0 /* CharacterScreen.swift in Sources */,
 				029CC6E725759D9F00BA88BB /* TabBarViewController.swift in Sources */,

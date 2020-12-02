@@ -25,9 +25,15 @@ final class HomeCoordinator: HomeCoordinatorProtocol {
         let interactor = HomeInteractor(worker: service, presenter: presenter)
         controller.interactor = interactor
         controller.coordinator = self
-        controller.title = "HOME"
+        controller.title = "Lista de Personagens"
         controller.view.backgroundColor = .red
         controller.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
+        self.setupNavigation()
         self.navigationController.pushViewController(controller, animated: true)
+    }
+    
+    private func setupNavigation() {
+        let textAttributes = [NSAttributedString.Key.foregroundColor: self.navigationController.traitCollection.userInterfaceStyle == .dark ? UIColor.systemOrange : .black]
+        self.navigationController.navigationBar.titleTextAttributes = textAttributes
     }
 }

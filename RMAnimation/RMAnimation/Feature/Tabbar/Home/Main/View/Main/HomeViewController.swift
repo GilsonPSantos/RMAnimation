@@ -31,8 +31,7 @@ extension HomeViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.homeScreen.homeTableView.dataSource = self
-        self.homeScreen.homeTableView.delegate = self
+        self.setupTableView()
         self.registerCell()
         self.setupService()
     }
@@ -82,5 +81,10 @@ extension HomeViewController {
     
     private func setupService() {
         self.interactor?.getCharacter(request: HomeRequest(url: "https://rickandmortyapi.com/api/character?page=1"))
+    }
+    
+    private func setupTableView() {
+        self.homeScreen.homeTableView.dataSource = self
+        self.homeScreen.homeTableView.delegate = self
     }
 }

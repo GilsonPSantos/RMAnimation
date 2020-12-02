@@ -35,13 +35,13 @@ extension UIView {
         }
     }
     
-    func addConstraint(to view: UIView? = nil, centerHorizontally: Bool = false, centerVertically: Bool = false) {
+    func addConstraint(to view: UIView? = nil, centerHorizontally: Bool = false, centerVertically: Bool = false, constantX: CGFloat = 0, constantY: CGFloat = 0) {
         self.translatesAutoresizingMaskIntoConstraints = false
         if centerHorizontally {
-            view?.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            view?.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: constantX).isActive = true
         }
         if centerVertically {
-            view?.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+            view?.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: constantY).isActive = true
         }
     }
 }
