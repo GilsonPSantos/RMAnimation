@@ -24,6 +24,7 @@ final class HomeInteractor {
 extension HomeInteractor: HomeInteractorProtocol {
     func getCharacter(request: HomeRequest) {
         guard !request.url.isEmpty else { self.presenter?.handlerError(); return }
+        self.presenter?.startRequest()
         self.worker.getCharacter(url: request.url) { (result) in
             switch result {
             case .success(let characterModel):
