@@ -39,3 +39,12 @@ extension CharacterTableViewCell: ScreenViewProtocol {
         self.backgroundColor = .gray
     }
 }
+
+//MARK: - AUX METHODS -
+extension CharacterTableViewCell {
+    func setupCell(viewData: CharacterViewData) {
+        self.characterScreen.labelName.text = viewData.name
+        self.characterScreen.labelDate.text = viewData.creationDate
+        self.characterScreen.imageCharacter.downloadImage(urlString: viewData.imageUrl, keyImage: viewData.name)
+    }
+}

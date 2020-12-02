@@ -39,7 +39,7 @@ extension HomePresenter {
     private func createViewData(_ response: HomeResponse) -> HomeViewData {
         var viewData = HomeViewData(isFinish: response.isLastPage, nextPage: response.nextPage)
         viewData.characters = response.characters.map({
-            return CharacterViewData(id: $0.id, name: $0.name, creationDate: $0.creationDate.convertDateToStringDDMMYYYY(), imageUrl: $0.urlImage)
+            return CharacterViewData(id: $0.id, name: $0.name, creationDate: "Criado em " + $0.creationDate.convertDateToStringDDMMYYYY(), imageUrl: $0.urlImage)
         })
          return viewData
     }

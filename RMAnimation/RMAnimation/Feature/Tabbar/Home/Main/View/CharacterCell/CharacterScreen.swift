@@ -24,7 +24,6 @@ class CharacterScreen: UIView {
         label.font = .boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         label.numberOfLines = 1
-        label.text = "Rick Sanchez"
         return label
     }()
     
@@ -34,7 +33,6 @@ class CharacterScreen: UIView {
         label.font = .boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         label.numberOfLines = 1
-        label.text = "Criado em 19/10/2020"
         return label
     }()
     
@@ -80,10 +78,10 @@ extension CharacterScreen: ScreenViewProtocol {
             self.labelDate.trailingAnchor.constraint(equalTo: self.imageArrow.leadingAnchor, constant: -5),
             self.labelDate.topAnchor.constraint(greaterThanOrEqualTo: self.labelName.bottomAnchor, constant: 0)
         ])
-        
     }
     
     func setupAdditional() {
-        self.imageCharacter.layer.cornerRadius = 5
+        self.imageCharacter.layer.masksToBounds = true
+        self.imageCharacter.layer.cornerRadius = 6
     }
 }
