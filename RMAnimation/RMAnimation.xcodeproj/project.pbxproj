@@ -68,6 +68,7 @@
 		02C8B0E4257868ED003DE2E0 /* DescriptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0E3257868ED003DE2E0 /* DescriptionScreen.swift */; };
 		02C8B0E625794154003DE2E0 /* BaseWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0E525794154003DE2E0 /* BaseWorkerProtocol.swift */; };
 		02C8B0E825794179003DE2E0 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0E725794179003DE2E0 /* BaseService.swift */; };
+		02C8B0EB257986F4003DE2E0 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0EA257986F3003DE2E0 /* LocationModel.swift */; };
 		2D8A5B96490178093843A3D2 /* Pods_RMAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF6F4469406E62A367AEA72 /* Pods_RMAnimationTests.framework */; };
 		3A3968230BEE5110E5B62268 /* Pods_RMAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */; };
 		A4B09D913FCE0198BFA44573 /* Pods_RMAnimation_RMAnimationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39D862AE5ACFC15090BA0DA /* Pods_RMAnimation_RMAnimationUITests.framework */; };
@@ -158,6 +159,7 @@
 		02C8B0E3257868ED003DE2E0 /* DescriptionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionScreen.swift; sourceTree = "<group>"; };
 		02C8B0E525794154003DE2E0 /* BaseWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWorkerProtocol.swift; sourceTree = "<group>"; };
 		02C8B0E725794179003DE2E0 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		02C8B0EA257986F3003DE2E0 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		081C69FF5950F5105075A55A /* Pods-RMAnimation-RMAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0855705EAB73F4550729706C /* Pods-RMAnimation-RMAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				0294DCF12576C293009FD118 /* CharacterModel.swift */,
+				02C8B0EA257986F3003DE2E0 /* LocationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -943,6 +946,7 @@
 				021128792575B38E00FE6016 /* FavoriteViewProtocol.swift in Sources */,
 				029CC7062575A10400BA88BB /* HomeViewData.swift in Sources */,
 				029CC6FE2575A10400BA88BB /* HomeInteractorProtocol.swift in Sources */,
+				02C8B0EB257986F4003DE2E0 /* LocationModel.swift in Sources */,
 				02C8B0AC2576F458003DE2E0 /* HomeScreen.swift in Sources */,
 				029CC6FF2575A10400BA88BB /* HomePresenter.swift in Sources */,
 				029CC7072575A10400BA88BB /* HomeEntity.swift in Sources */,

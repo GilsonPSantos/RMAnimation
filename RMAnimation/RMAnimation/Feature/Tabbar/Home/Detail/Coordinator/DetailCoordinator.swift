@@ -24,7 +24,7 @@ final class DetailCoordinator: DetailCoordinatorProtocol {
     }
     
     func start() {
-        let service = DetailService()
+        let service = BaseService()
         let controller = DetailViewController(identifier: self.id)
         let presenter = DetailPresenter(view: controller)
         let interactor = DetailInteractor(worker: service, presenter: presenter)

@@ -34,6 +34,7 @@ extension DetailViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = detailScreen
+        self.interactor?.getDetail(request: DetailRequest(url: "https://rickandmortyapi.com/api/character/1"))
     }
     
     override func viewDidDisappear(_ animated: Bool) {

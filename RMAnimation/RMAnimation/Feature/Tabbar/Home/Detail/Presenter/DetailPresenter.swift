@@ -20,7 +20,17 @@ final class DetailPresenter {
 
 //MARK: - PRESENTER PROTOCOL -
 extension DetailPresenter: DetailPresenterProtocol {
+    func startRequest() {
+        
+    }
     
+    func handlerSuccess(response: DetailResponse) {
+        print(response)
+    }
+    
+    func handlerError() {
+        
+    }
 }
 
 //MARK: - AUX METHODS -
