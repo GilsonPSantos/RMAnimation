@@ -11,10 +11,10 @@ import Foundation
 //MARK: - INTERACTOR CLASS -
 final class HomeInteractor {
     
-    private let worker: HomeWorkerProtocol
+    private let worker: BaseWorkerProtocol
     private let presenter: HomePresenterProtocol?
     
-    init(worker: HomeWorkerProtocol, presenter: HomePresenterProtocol) {
+    init(worker: BaseWorkerProtocol, presenter: HomePresenterProtocol) {
         self.worker = worker
         self.presenter = presenter
     }
@@ -25,7 +25,7 @@ extension HomeInteractor: HomeInteractorProtocol {
     func getCharacter(request: HomeRequest) {
         guard !request.url.isEmpty else { self.presenter?.handlerError(); return }
         self.presenter?.startRequest()
-        self.worker.getCharacter(url: request.url) { (result) in
+        self.worker.getService(url: request.url, CharacterModel.self) { (result) in
             switch result {
             case .success(let characterModel):
                 let response = self.createResponse(characterModel)

@@ -1,15 +1,15 @@
 //
-//  HomeService.swift
+//  BaseService.swift
 //  RMAnimation
 //
-//  Created by Gilson Santos on 30/11/20.
+//  Created by Gilson Santos on 03/12/20.
 //  Copyright © 2020 Gilson Santos. All rights reserved.
 //
 
 import Foundation
 import NetworkMD
 
-final class HomeService: HomeWorkerProtocol {
+final class BaseService: BaseWorkerProtocol {
     
     private let configuration: NetworkConfiguration
     private let service = NetworkModule().getModule()
@@ -18,15 +18,15 @@ final class HomeService: HomeWorkerProtocol {
         self.configuration = configuration
     }
     
-    func getCharacter(url: String, _ completion: @escaping (Result<CharacterModel, ErrorNetwork>) -> Void) {
+    func getService<T>(url: String, _ model: T.Type, _ completion: @escaping (Result<T, ErrorNetwork>) -> Void) where T : Decodable {
         guard Reachability.isConnectedToNetwork() else { completion(.failure(.notNetwork)); return }
         self.configuration.baseUrl = url
         self.service.request(configuration: self.configuration) { (result) in
             switch result {
             case .success(let data):
                 do {
-                    let characterModel = try JSONDecoder().decode(CharacterModel.self, from: data)
-                    completion(.success(characterModel))
+                    let model = try JSONDecoder().decode(T.self, from: data)
+                    completion(.success(model))
                 } catch {
                     completion(.failure(.genericError))
                 }
@@ -35,4 +35,6 @@ final class HomeService: HomeWorkerProtocol {
             }
         }
     }
+    
+    
 }

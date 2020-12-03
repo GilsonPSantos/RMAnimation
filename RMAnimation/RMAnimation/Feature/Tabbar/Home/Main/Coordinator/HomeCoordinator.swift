@@ -20,7 +20,7 @@ final class HomeCoordinator: HomeCoordinatorProtocol {
     }
     
     func start() {
-        let service = HomeService()
+        let service = BaseService()
         let controller = HomeViewController()
         let presenter = HomePresenter(view: controller)
         let interactor = HomeInteractor(worker: service, presenter: presenter)
