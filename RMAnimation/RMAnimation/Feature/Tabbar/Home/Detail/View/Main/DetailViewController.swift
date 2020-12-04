@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
 extension DetailViewController {
     
     convenience init(urlDetail: String) {
-        self.init(nibName:nil, bundle:nil)
+        self.init(nibName: nil, bundle: nil)
         self.urlDetail = urlDetail
     }
     

@@ -21,19 +21,28 @@ final class DetailPresenter {
 //MARK: - PRESENTER PROTOCOL -
 extension DetailPresenter: DetailPresenterProtocol {
     func startRequest() {
-        
+        self.view?.showLoading()
     }
     
     func handlerSuccess(response: DetailResponse) {
-        print(response)
+        let viewData = self.createViewData(response)
+        self.view?.showSuccess(viewData: viewData)
     }
     
     func handlerError() {
-        
+        self.view?.showError()
     }
 }
 
 //MARK: - AUX METHODS -
 extension DetailPresenter {
+    private func createViewData(_ response: DetailResponse) -> DetailViewData {
+        let originViewData = self.createLocationElementViewData(response.origin)
+        let locationViewData = self.createLocationElementViewData(response.location)
+        return DetailViewData(id: response.id, urlBanner: response.urlImage, originElement: originViewData, locationElement: locationViewData, enableFavorite: response.isFavorite)
+    }
     
+    private func createLocationElementViewData(_ response: LocationResponse) -> LocationElementViewData {
+        return LocationElementViewData(valueName: response.name, valueType: response.type, valueDimension: response.dimension)
+    }
 }
