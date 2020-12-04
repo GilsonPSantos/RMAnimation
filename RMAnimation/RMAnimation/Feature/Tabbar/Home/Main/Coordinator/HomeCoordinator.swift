@@ -37,8 +37,8 @@ final class HomeCoordinator: HomeCoordinatorProtocol {
         self.navigationController.navigationBar.titleTextAttributes = textAttributes
     }
     
-    func showDetail(id: Int, characterName: String) {
-        let detailCoordinator = DetailCoordinator(navigationController: self.navigationController, titleScreen: characterName, id: id)
+    func showDetail(urlDetail: String, characterName: String) {
+        let detailCoordinator = DetailCoordinator(navigationController: self.navigationController, titleScreen: characterName, urlDetail: urlDetail)
         detailCoordinator.parentCoordinator = self
         self.childCoordinators.append(detailCoordinator)
         detailCoordinator.start()

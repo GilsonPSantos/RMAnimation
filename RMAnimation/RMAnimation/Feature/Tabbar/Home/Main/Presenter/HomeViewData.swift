@@ -20,4 +20,5 @@ struct CharacterViewData {
     let name: String
     let creationDate: String
     let imageUrl: String
+    let urlDetail: String
 }

@@ -14,7 +14,6 @@ final class DetailInteractor {
     private let worker: BaseWorkerProtocol
     private let presenter: DetailPresenterProtocol?
     private var response = DetailResponse()
-    private let dispatchSemaphore = DispatchSemaphore(value: 0)
     
     init(worker: BaseWorkerProtocol, presenter: DetailPresenterProtocol) {
         self.worker = worker
@@ -28,20 +27,23 @@ extension DetailInteractor: DetailInteractorProtocol {
         guard !request.url.isEmpty else { self.presenter?.handlerError(); return }
         self.presenter?.startRequest()
         DispatchQueue.global().async {
+            let dispatchSemaphore = DispatchSemaphore(value: 0)
+            let dispatchGroup = DispatchGroup()
             
-            self.getCharacterInfo(url: request.url, semaphore: self.dispatchSemaphore)
+            self.getCharacterInfo(url: request.url, semaphore: dispatchSemaphore)
                         
-            self.dispatchSemaphore.wait()
-            self.getLocationInfo(url: self.response.urlLocation, semaphore: self.dispatchSemaphore)
-
-            self.dispatchSemaphore.wait()
-            if self.isValidResponse(self.response) {
-                self.presenter?.handlerSuccess(response: self.response)
-            } else {
-                self.presenter?.handlerError()
+            dispatchSemaphore.wait()
+            self.getLocationInfo(url: self.response.urlLocation, dispatchGroup: dispatchGroup, isOrigin: false)
+            self.getLocationInfo(url: self.response.urlOrigin, dispatchGroup: dispatchGroup, isOrigin: true)
+            
+            dispatchGroup.notify(queue: .main) {
+                if self.isValidResponse(self.response) {
+                    self.presenter?.handlerSuccess(response: self.response)
+                } else {
+                    self.presenter?.handlerError()
+                }
             }
         }
-        
     }
     
     private func getCharacterInfo(url: String, semaphore: DispatchSemaphore) {
@@ -58,16 +60,23 @@ extension DetailInteractor: DetailInteractorProtocol {
     }
     
     
-    private func getLocationInfo(url: String, semaphore: DispatchSemaphore) {
+    private func getLocationInfo(url: String, dispatchGroup: DispatchGroup, isOrigin: Bool) {
+        dispatchGroup.enter()
+        guard !url.isEmpty else { dispatchGroup.leave(); return }
         self.worker.getService(url: url, LocationModel.self) { [weak self] (result) in
-            guard let strongSelf = self else { return }
+            guard let strongSelf = self else { dispatchGroup.leave(); return }
             switch result {
             case .success(let resultModel):
-                strongSelf.response.location = strongSelf.crateLocationResponse(resultModel)
+                let locationResponse = strongSelf.crateLocationResponse(resultModel)
+                if isOrigin {
+                    strongSelf.response.origin = locationResponse
+                } else {
+                    strongSelf.response.location = locationResponse
+                }
             case .failure(_):
                 strongSelf.presenter?.handlerError()
             }
-            semaphore.signal()
+            dispatchGroup.leave()
         }
     }
 }
@@ -90,6 +99,9 @@ extension DetailInteractor {
     }
     
     private func isValidResponse(_ response: DetailResponse) -> Bool {
-        return true
+        return self.response.id > 0 && !self.response.urlImage.isEmpty
+            && !self.response.origin.name.isEmpty && !self.response.origin.type.isEmpty
+            && !self.response.origin.dimension.isEmpty && !self.response.location.name.isEmpty
+            && !self.response.location.type.isEmpty && !self.response.location.dimension.isEmpty
     }
 }

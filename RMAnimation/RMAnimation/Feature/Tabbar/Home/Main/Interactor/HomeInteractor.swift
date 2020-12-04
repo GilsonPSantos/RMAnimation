@@ -47,8 +47,8 @@ extension HomeInteractor {
         guard let info = model.info, let results = model.results else { return HomeResponse() }
         var response = HomeResponse(pages: info.pages ?? 0, count: info.count ?? 0, nextPage: info.next ?? "", isLastPage: info.next == nil)
         results.forEach({
-            guard let id = $0.id, let name = $0.name, let urlImage = $0.image, let creationDate = $0.created?.stringToDate() else { return }
-            response.characters.append(CharacterResponse( id: id, name: name, creationDate: creationDate, urlImage: urlImage))
+            guard let id = $0.id, let name = $0.name, let urlImage = $0.image, let creationDate = $0.created?.stringToDate(), let urlDetail = $0.url else { return }
+            response.characters.append(CharacterResponse( id: id, name: name, creationDate: creationDate, urlImage: urlImage, urlDetail: urlDetail))
         })
         return response
     }

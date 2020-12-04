@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
     var interactor: DetailInteractorProtocol?
     private lazy var viewData:DetailViewData = DetailViewData()
     weak var coordinator: DetailCoordinatorProtocol?
-    var identifier = 0
+    var urlDetail = ""
     
     // MARK: IBACTIONS
 }
@@ -26,15 +26,15 @@ class DetailViewController: UIViewController {
 //MARK: - LIFE CYCLE -
 extension DetailViewController {
     
-    convenience init(identifier: Int) {
+    convenience init(urlDetail: String) {
         self.init(nibName:nil, bundle:nil)
-        self.identifier = identifier
+        self.urlDetail = urlDetail
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = detailScreen
-        self.interactor?.getDetail(request: DetailRequest(url: "https://rickandmortyapi.com/api/character/1"))
+        self.interactor?.getDetail(request: DetailRequest(url: self.urlDetail))
     }
     
     override func viewDidDisappear(_ animated: Bool) {
