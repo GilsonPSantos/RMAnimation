@@ -14,15 +14,18 @@ final class DetailInteractor {
     private let worker: BaseWorkerProtocol
     private let presenter: DetailPresenterProtocol?
     private var response = DetailResponse()
+    private let dataBase: FavoriteDataBaseProtocol
     
-    init(worker: BaseWorkerProtocol, presenter: DetailPresenterProtocol) {
+    init(worker: BaseWorkerProtocol, presenter: DetailPresenterProtocol, favoriteDataBase: FavoriteDataBaseProtocol) {
         self.worker = worker
         self.presenter = presenter
+        self.dataBase = favoriteDataBase
     }
 }
 
 //MARK: - INTERACTOR PROTOCOL -
 extension DetailInteractor: DetailInteractorProtocol {
+    
     func getDetail(request: DetailRequest) {
         guard !request.url.isEmpty else { self.presenter?.handlerError(); return }
         self.presenter?.startRequest()
@@ -44,6 +47,14 @@ extension DetailInteractor: DetailInteractorProtocol {
                 }
             }
         }
+    }
+    
+    func addFavorite(id: Int) {
+        self.dataBase.saveFavorite(id: id)
+    }
+    
+    func removeFavorite(id: Int) {
+        self.dataBase.removeFavorite(id: id)
     }
     
     private func getCharacterInfo(url: String, semaphore: DispatchSemaphore) {
@@ -89,8 +100,8 @@ extension DetailInteractor {
         let urlImage = model.image ?? ""
         let originUrl = model.origin?.url ?? ""
         let locationUrl = model.location?.url ?? ""
-        
-        return DetailResponse(id: id, name: name, urlImage: urlImage, urlOrigin: originUrl, urlLocation: locationUrl)
+        let isFavorite = self.dataBase.fetchFavorite(id: id) != nil
+        return DetailResponse(id: id, name: name, urlImage: urlImage, urlOrigin: originUrl, urlLocation: locationUrl, isFavorite: isFavorite)
     }
     
     private func crateLocationResponse(_ model: LocationModel) -> LocationResponse {

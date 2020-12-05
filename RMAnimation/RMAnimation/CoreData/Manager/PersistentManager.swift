@@ -51,8 +51,10 @@ extension PersistentManager {
 
 // MARK: - AUX METHODS -
 extension PersistentManager {
-    func fetchDataBase<T: NSManagedObject>(_ dataBase: T.Type) -> T? {
+    func fetchDataBase<T: NSManagedObject>(_ dataBase: T.Type, id: Int) -> T? {
+        let predicate = NSPredicate(format: "id = %@", String(id))
         let fetchRequest: NSFetchRequest<T> = NSFetchRequest<T>(entityName: String(describing: T.self))
+        fetchRequest.predicate = predicate
         do {
             let result = try PersistentManager.shared.context.fetch(fetchRequest)
             return result.first

@@ -10,6 +10,8 @@ import UIKit
 
 class DetailScreen: UIView {
     
+    let errorView = ErrorScreen()
+    let loadingView = LoadingScreen()
     let descriptionOrigin = DescriptionScreen()
     let descriptionLocation = DescriptionScreen()
     
@@ -48,9 +50,13 @@ extension DetailScreen: ScreenViewProtocol {
         self.addSubview(self.self.imageStar)
         self.addSubview(self.descriptionOrigin)
         self.addSubview(self.descriptionLocation)
+        self.addSubview(self.errorView)
+        self.addSubview(self.loadingView)
     }
     
     func setupConstraints() {
+        self.errorView.addConstraint(to: self, leading: 0, trailing: 0, top: 0, bottom: 0)
+        self.loadingView.addConstraint(to: self, leading: 0, trailing: 0, top: 0, bottom: 0)
         self.imageBanner.addConstraint(to: self, leading: 0, trailing: 0, top: 0, height: 300)
         self.imageStar.addConstraint(to: self, trailing: 10, top: 100, width: 50, height: 50)
         self.descriptionOrigin.addConstraint(to: self, leading: 0, trailing: 0)
@@ -70,5 +76,6 @@ extension DetailScreen: ScreenViewProtocol {
         self.backgroundColor = .systemBackground
         self.descriptionOrigin.backgroundColor = .yellow
         self.descriptionLocation.backgroundColor = .red
+        self.loadingView.backgroundColor = .systemRed
     }
 }

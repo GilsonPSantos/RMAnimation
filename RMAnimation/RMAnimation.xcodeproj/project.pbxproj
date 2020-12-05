@@ -69,6 +69,8 @@
 		02C8B0E625794154003DE2E0 /* BaseWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0E525794154003DE2E0 /* BaseWorkerProtocol.swift */; };
 		02C8B0E825794179003DE2E0 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0E725794179003DE2E0 /* BaseService.swift */; };
 		02C8B0EB257986F4003DE2E0 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8B0EA257986F3003DE2E0 /* LocationModel.swift */; };
+		02CACFFD257B032C00950D07 /* FavoriteDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CACFFC257B032C00950D07 /* FavoriteDataBase.swift */; };
+		02CACFFF257B045C00950D07 /* FavoriteDataBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CACFFE257B045C00950D07 /* FavoriteDataBaseProtocol.swift */; };
 		2D8A5B96490178093843A3D2 /* Pods_RMAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF6F4469406E62A367AEA72 /* Pods_RMAnimationTests.framework */; };
 		3A3968230BEE5110E5B62268 /* Pods_RMAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */; };
 		A4B09D913FCE0198BFA44573 /* Pods_RMAnimation_RMAnimationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39D862AE5ACFC15090BA0DA /* Pods_RMAnimation_RMAnimationUITests.framework */; };
@@ -160,6 +162,8 @@
 		02C8B0E525794154003DE2E0 /* BaseWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWorkerProtocol.swift; sourceTree = "<group>"; };
 		02C8B0E725794179003DE2E0 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		02C8B0EA257986F3003DE2E0 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		02CACFFC257B032C00950D07 /* FavoriteDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDataBase.swift; sourceTree = "<group>"; };
+		02CACFFE257B045C00950D07 /* FavoriteDataBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDataBaseProtocol.swift; sourceTree = "<group>"; };
 		039BC65AC42175FA7C792C0F /* Pods_RMAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		081C69FF5950F5105075A55A /* Pods-RMAnimation-RMAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0855705EAB73F4550729706C /* Pods-RMAnimation-RMAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; path = "Target Support Files/Pods-RMAnimation-RMAnimationUITests/Pods-RMAnimation-RMAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -363,6 +367,7 @@
 		027C7A9C2575751F00152575 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				02CACFFB257B02E900950D07 /* Favorite */,
 				029CC6C3257581CC00BA88BB /* Manager */,
 				027C7A9D2575752800152575 /* DataBase */,
 			);
@@ -641,6 +646,15 @@
 				02C8B0E3257868ED003DE2E0 /* DescriptionScreen.swift */,
 			);
 			path = DescriptionScreen;
+			sourceTree = "<group>";
+		};
+		02CACFFB257B02E900950D07 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				02CACFFE257B045C00950D07 /* FavoriteDataBaseProtocol.swift */,
+				02CACFFC257B032C00950D07 /* FavoriteDataBase.swift */,
+			);
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 		6AA6547E4953DF8440C7137F /* Frameworks */ = {
@@ -928,9 +942,11 @@
 				02C8B0D025783C00003DE2E0 /* DetailPresenterProtocol.swift in Sources */,
 				02C8B0982576EA2E003DE2E0 /* ScreenViewProtocol.swift in Sources */,
 				02C8B0BF2577FAA9003DE2E0 /* ErrorScreen.swift in Sources */,
+				02CACFFD257B032C00950D07 /* FavoriteDataBase.swift in Sources */,
 				0294DCF22576C293009FD118 /* CharacterModel.swift in Sources */,
 				02C8B0A02576EADC003DE2E0 /* UserDefaultHelper.swift in Sources */,
 				02C8B0D425783C00003DE2E0 /* DetailViewProtocol.swift in Sources */,
+				02CACFFF257B045C00950D07 /* FavoriteDataBaseProtocol.swift in Sources */,
 				027C7A732575749D00152575 /* RMAnimation.xcdatamodeld in Sources */,
 				02C8B0BD2577FA70003DE2E0 /* LoadingScreen.swift in Sources */,
 				02C8B0E4257868ED003DE2E0 /* DescriptionScreen.swift in Sources */,

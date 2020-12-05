@@ -9,9 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    
-    // MARK: OUTLETS
-    
+        
     // MARK: CONSTANTS
     let detailScreen = DetailScreen()
     // MARK: VARIABLES
@@ -45,10 +43,32 @@ extension DetailViewController {
 
 //MARK: - VIEW PROTOCOL -
 extension DetailViewController: DetailViewProtocol {
-
+    func showLoading() {
+        self.detailScreen.loadingView.isHidden = false
+        self.detailScreen.errorView.isHidden = true
+    }
+    
+    func showSuccess(viewData: DetailViewData) {
+        self.setupView(viewData)
+        self.detailScreen.loadingView.isHidden = true
+    }
+    
+    func showError() {
+        self.detailScreen.errorView.isHidden = false
+        self.detailScreen.loadingView.isHidden = true
+    }
 }
 
 //MARK: - AUX METHODS -
 extension DetailViewController {
- 
+    private func setupView(_ viewData: DetailViewData) {
+        self.detailScreen.descriptionOrigin.labelTitleName.text = viewData.originElement.titleName.rawValue
+        self.detailScreen.descriptionOrigin.labelName.text = viewData.originElement.valueName
+        
+        self.detailScreen.descriptionOrigin.labelTitleType.text = viewData.originElement.titleType.rawValue
+        self.detailScreen.descriptionOrigin.labelType.text = viewData.originElement.valueType
+        
+        self.detailScreen.descriptionOrigin.labelTitleDimension.text = viewData.originElement.titleDimension.rawValue
+        self.detailScreen.descriptionOrigin.labelDimension.text = viewData.originElement.valueDimension
+    }
 }

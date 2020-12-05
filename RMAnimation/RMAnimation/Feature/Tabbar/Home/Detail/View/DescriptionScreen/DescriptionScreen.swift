@@ -21,7 +21,7 @@ class DescriptionScreen: UIView {
         return label
     }()
     
-    private let labelTitleName: UILabel = {
+    let labelTitleName: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.font = .boldSystemFont(ofSize: 17)
@@ -42,7 +42,7 @@ class DescriptionScreen: UIView {
         return label
     }()
     
-    private let labelTitleType: UILabel = {
+    let labelTitleType: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.font = .boldSystemFont(ofSize: 17)
@@ -63,7 +63,7 @@ class DescriptionScreen: UIView {
         return label
     }()
     
-    private let labelTitleDimension: UILabel = {
+    let labelTitleDimension: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.font = .boldSystemFont(ofSize: 17)
