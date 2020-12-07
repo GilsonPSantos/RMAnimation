@@ -63,6 +63,5 @@ extension DetailScreen: ScreenViewProtocol {
     
     func setupAdditional() {
         self.backgroundColor = .systemBackground
-        self.loadingView.backgroundColor = .systemRed
     }
 }

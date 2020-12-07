@@ -19,6 +19,7 @@
 		0211287A2575B38E00FE6016 /* FavoriteViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211286F2575B38E00FE6016 /* FavoriteViewData.swift */; };
 		0211287B2575B38E00FE6016 /* FavoriteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021128702575B38E00FE6016 /* FavoriteEntity.swift */; };
 		021128812575B4C000FE6016 /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021128802575B4C000FE6016 /* FavoriteService.swift */; };
+		0252E445257EEDB900B8040D /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E444257EEDB900B8040D /* FavoriteScreen.swift */; };
 		027C7A692575749D00152575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C7A682575749D00152575 /* AppDelegate.swift */; };
 		027C7A732575749D00152575 /* RMAnimation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 027C7A712575749D00152575 /* RMAnimation.xcdatamodeld */; };
 		027C7A75257574A300152575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027C7A74257574A300152575 /* Assets.xcassets */; };
@@ -106,6 +107,7 @@
 		0211286F2575B38E00FE6016 /* FavoriteViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewData.swift; sourceTree = "<group>"; };
 		021128702575B38E00FE6016 /* FavoriteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntity.swift; sourceTree = "<group>"; };
 		021128802575B4C000FE6016 /* FavoriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
+		0252E444257EEDB900B8040D /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
 		027C7A652575749D00152575 /* RMAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027C7A682575749D00152575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027C7A722575749D00152575 /* RMAnimation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMAnimation.xcdatamodel; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			children = (
 				0211286E2575B38E00FE6016 /* FavoriteViewProtocol.swift */,
 				0211286B2575B38E00FE6016 /* FavoriteViewController.swift */,
+				0252E444257EEDB900B8040D /* FavoriteScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -947,6 +950,7 @@
 				02C8B0A02576EADC003DE2E0 /* UserDefaultHelper.swift in Sources */,
 				02C8B0D425783C00003DE2E0 /* DetailViewProtocol.swift in Sources */,
 				02CACFFF257B045C00950D07 /* FavoriteDataBaseProtocol.swift in Sources */,
+				0252E445257EEDB900B8040D /* FavoriteScreen.swift in Sources */,
 				027C7A732575749D00152575 /* RMAnimation.xcdatamodeld in Sources */,
 				02C8B0BD2577FA70003DE2E0 /* LoadingScreen.swift in Sources */,
 				02C8B0E4257868ED003DE2E0 /* DescriptionScreen.swift in Sources */,
