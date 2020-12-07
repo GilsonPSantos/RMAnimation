@@ -10,6 +10,8 @@ import Foundation
 
 //MARK: - VIEW PROTOCOL -
 protocol DetailViewProtocol: class {
-    
+    func showLoading()
+    func showSuccess(viewData: DetailViewData)
+    func showError()
 }
 

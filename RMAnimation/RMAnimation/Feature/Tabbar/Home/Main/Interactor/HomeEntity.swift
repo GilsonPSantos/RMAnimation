@@ -41,4 +41,5 @@ struct CharacterResponse {
     let name: String
     let creationDate: Date
     let urlImage: String
+    let urlDetail: String
 }

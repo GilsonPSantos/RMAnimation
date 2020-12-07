@@ -10,7 +10,7 @@ import Foundation
 
 struct CharacterModel: Decodable {
     let info: InfoModel?
-    let results: [ResultsModel]?
+    let results: [ResultModel]?
 }
 
 struct InfoModel: Decodable {
@@ -20,7 +20,7 @@ struct InfoModel: Decodable {
     let prev: String?
 }
 
-struct ResultsModel: Decodable {
+struct ResultModel: Decodable {
     let id: Int?
     let name: String?
     let status: String?

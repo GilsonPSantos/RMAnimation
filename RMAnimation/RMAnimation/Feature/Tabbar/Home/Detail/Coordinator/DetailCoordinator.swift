@@ -15,23 +15,22 @@ final class DetailCoordinator: DetailCoordinatorProtocol {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     private let titleScreen: String
-    private let id: Int
+    private let urlDetail: String
     
-    init(navigationController: UINavigationController, titleScreen: String, id: Int) {
+    init(navigationController: UINavigationController, titleScreen: String, urlDetail: String) {
         self.navigationController = navigationController
         self.titleScreen = titleScreen
-        self.id = id
+        self.urlDetail = urlDetail
     }
     
     func start() {
-        let service = DetailService()
-        let controller = DetailViewController(identifier: self.id)
+        let service = BaseService()
+        let controller = DetailViewController(urlDetail: self.urlDetail)
         let presenter = DetailPresenter(view: controller)
-        let interactor = DetailInteractor(worker: service, presenter: presenter)
+        let interactor = DetailInteractor(worker: service, presenter: presenter, favoriteDataBase: FavoriteDataBase())
         controller.interactor = interactor
         controller.coordinator = self
         controller.title = self.titleScreen
-        controller.identifier = self.id
         controller.hidesBottomBarWhenPushed = true
         self.navigationController.pushViewController(controller, animated: true)
     }

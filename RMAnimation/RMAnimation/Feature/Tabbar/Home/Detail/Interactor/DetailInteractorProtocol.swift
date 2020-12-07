@@ -10,5 +10,6 @@ import Foundation
 
 //MARK: - INTERACTOR PROTOCOL -
 protocol DetailInteractorProtocol: class {
-    
+    func getDetail(request: DetailRequest)
+    func addOrRemoveFavorite(id: Int)
 }

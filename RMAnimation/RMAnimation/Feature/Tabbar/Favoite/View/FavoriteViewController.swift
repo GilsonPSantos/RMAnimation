@@ -9,10 +9,9 @@
 import UIKit
 
 class FavoriteViewController: UIViewController {
-    
-    // MARK: OUTLETS
-    
+        
     // MARK: CONSTANTS
+    let favoriteScreen = FavoriteScreen()
     
     // MARK: VARIABLES
     var interactor: FavoriteInteractorProtocol?
@@ -36,5 +35,7 @@ extension FavoriteViewController: FavoriteViewProtocol {
 
 //MARK: - AUX METHODS -
 extension FavoriteViewController {
- 
+    private func registerCell() {
+        self.favoriteScreen.favoriteTableView.register(CharacterTableViewCell.self, forCellReuseIdentifier: CharacterTableViewCell.CELL_ID)
+    }
 }
