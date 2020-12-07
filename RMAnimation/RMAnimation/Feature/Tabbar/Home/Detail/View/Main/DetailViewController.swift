@@ -19,6 +19,12 @@ class DetailViewController: UIViewController {
     var urlDetail = ""
     
     // MARK: IBACTIONS
+    @objc private func addOrRemoveFavorite() {
+        self.interactor?.addOrRemoveFavorite(id: self.viewData.id)
+        self.viewData.enableFavorite.toggle()
+        let nameImage = self.viewData.enableFavorite ? "star.fill" : "star"
+        self.navigationItem.rightBarButtonItem?.image = UIImage(systemName: nameImage)
+    }
 }
 
 //MARK: - LIFE CYCLE -
@@ -32,6 +38,7 @@ extension DetailViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = detailScreen
+        self.setupNavigation()
         self.interactor?.getDetail(request: DetailRequest(url: self.urlDetail))
     }
     
@@ -62,6 +69,8 @@ extension DetailViewController: DetailViewProtocol {
 //MARK: - AUX METHODS -
 extension DetailViewController {
     private func setupView(_ viewData: DetailViewData) {
+        self.viewData = viewData
+        self.detailScreen.descriptionOrigin.labelTitle.text = "Origin:"
         self.detailScreen.descriptionOrigin.labelTitleName.text = viewData.originElement.titleName.rawValue
         self.detailScreen.descriptionOrigin.labelName.text = viewData.originElement.valueName
         
@@ -70,5 +79,23 @@ extension DetailViewController {
         
         self.detailScreen.descriptionOrigin.labelTitleDimension.text = viewData.originElement.titleDimension.rawValue
         self.detailScreen.descriptionOrigin.labelDimension.text = viewData.originElement.valueDimension
+        
+        self.detailScreen.descriptionLocation.labelTitle.text = "Location:"
+        self.detailScreen.descriptionLocation.labelTitleName.text = viewData.locationElement.titleName.rawValue
+        self.detailScreen.descriptionLocation.labelName.text = viewData.locationElement.valueName
+        
+        self.detailScreen.descriptionLocation.labelTitleType.text = viewData.locationElement.titleType.rawValue
+        self.detailScreen.descriptionLocation.labelType.text = viewData.locationElement.valueType
+        
+        self.detailScreen.descriptionLocation.labelTitleDimension.text = viewData.locationElement.titleDimension.rawValue
+        self.detailScreen.descriptionLocation.labelDimension.text = viewData.locationElement.valueDimension
+        self.detailScreen.imageBanner.downloadImage(urlString: viewData.urlBanner, keyImage: viewData.urlBanner)
+        
+        let nameImage = viewData.enableFavorite ? "star.fill" : "star"
+        self.navigationItem.rightBarButtonItem?.image = UIImage(systemName: nameImage)
+    }
+    
+    private func setupNavigation() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: #selector(self.addOrRemoveFavorite))
     }
 }

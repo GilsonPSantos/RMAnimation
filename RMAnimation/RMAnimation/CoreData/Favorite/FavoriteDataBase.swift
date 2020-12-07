@@ -11,10 +11,15 @@ import CoreData
 
 final class FavoriteDataBase: FavoriteDataBaseProtocol {
     
-    func saveFavorite(id: Int) {
-        let favoriteDataBase = Favorite(context: PersistentManager.shared.context)
-        favoriteDataBase.id = Int16(id)
-        PersistentManager.shared.saveContext()
+    func saveOrRemoveFavorite(id: Int) {
+        var favoriteDataBase: Favorite?
+        if let favoriteDB = self.fetchFavorite(id: id) {
+            PersistentManager.shared.context.delete(favoriteDB)
+        } else {
+            favoriteDataBase = Favorite(context: PersistentManager.shared.context)
+            favoriteDataBase?.id = Int16(id)
+            PersistentManager.shared.saveContext()
+        }
     }
     
     func fetchFavorite(id: Int) -> Favorite? {

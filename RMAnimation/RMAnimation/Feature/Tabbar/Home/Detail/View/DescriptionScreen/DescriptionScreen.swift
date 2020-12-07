@@ -28,7 +28,6 @@ class DescriptionScreen: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.backgroundColor = .systemPink
-        label.text = "Name:"
         return label
     }()
     
@@ -38,7 +37,6 @@ class DescriptionScreen: UIView {
         label.font = .boldSystemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
-        label.text = "Name Teste"
         return label
     }()
     
@@ -49,7 +47,6 @@ class DescriptionScreen: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.backgroundColor = .systemPink
-        label.text = "Type:"
         return label
     }()
     
@@ -59,7 +56,6 @@ class DescriptionScreen: UIView {
         label.font = .boldSystemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
-        label.text = "Type Value"
         return label
     }()
     
@@ -70,7 +66,6 @@ class DescriptionScreen: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.backgroundColor = .systemPink
-        label.text = "Dimension:"
         return label
     }()
     
@@ -80,7 +75,6 @@ class DescriptionScreen: UIView {
         label.font = .boldSystemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
-        label.text = "Dimension Value"
         return label
     }()
 
@@ -136,6 +130,5 @@ extension DescriptionScreen: ScreenViewProtocol {
     }
     
     func setupAdditional() {
-        self.backgroundColor = .blue
     }
 }

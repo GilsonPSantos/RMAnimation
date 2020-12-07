@@ -17,17 +17,8 @@ class DetailScreen: UIView {
     
     lazy var imageBanner: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleToFill
         imageView.isAccessibilityElement = true
-        imageView.backgroundColor = .blue
-        return imageView
-    }()
-    
-    lazy var imageStar: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.isAccessibilityElement = true
-        imageView.image = UIImage(systemName: "star")
         return imageView
     }()
     
@@ -47,7 +38,6 @@ class DetailScreen: UIView {
 extension DetailScreen: ScreenViewProtocol {
     func addViewHierarchy() {
         self.addSubview(self.imageBanner)
-        self.addSubview(self.self.imageStar)
         self.addSubview(self.descriptionOrigin)
         self.addSubview(self.descriptionLocation)
         self.addSubview(self.errorView)
@@ -57,8 +47,7 @@ extension DetailScreen: ScreenViewProtocol {
     func setupConstraints() {
         self.errorView.addConstraint(to: self, leading: 0, trailing: 0, top: 0, bottom: 0)
         self.loadingView.addConstraint(to: self, leading: 0, trailing: 0, top: 0, bottom: 0)
-        self.imageBanner.addConstraint(to: self, leading: 0, trailing: 0, top: 0, height: 300)
-        self.imageStar.addConstraint(to: self, trailing: 10, top: 100, width: 50, height: 50)
+        self.imageBanner.addConstraint(to: self, leading: 0, trailing: 0, top: 90, height: 300)
         self.descriptionOrigin.addConstraint(to: self, leading: 0, trailing: 0)
         
         self.descriptionLocation.addConstraint(to: self, leading: 0, trailing: 0)
@@ -74,8 +63,6 @@ extension DetailScreen: ScreenViewProtocol {
     
     func setupAdditional() {
         self.backgroundColor = .systemBackground
-        self.descriptionOrigin.backgroundColor = .yellow
-        self.descriptionLocation.backgroundColor = .red
         self.loadingView.backgroundColor = .systemRed
     }
 }

@@ -49,12 +49,8 @@ extension DetailInteractor: DetailInteractorProtocol {
         }
     }
     
-    func addFavorite(id: Int) {
-        self.dataBase.saveFavorite(id: id)
-    }
-    
-    func removeFavorite(id: Int) {
-        self.dataBase.removeFavorite(id: id)
+    func addOrRemoveFavorite(id: Int) {
+        self.dataBase.saveOrRemoveFavorite(id: id)
     }
     
     private func getCharacterInfo(url: String, semaphore: DispatchSemaphore) {
