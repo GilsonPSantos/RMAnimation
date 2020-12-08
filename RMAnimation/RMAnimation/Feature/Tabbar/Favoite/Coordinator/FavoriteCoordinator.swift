@@ -20,10 +20,10 @@ final class FavoriteCoordinator: FavoriteCoordinatorProtocol {
     }
     
     func start() {
-        let service = FavoriteService()
+        let dataBase = FavoriteDataBase()
         let controller = FavoriteViewController()
         let presenter = FavoritePresenter(view: controller)
-        let interactor = FavoriteInteractor(worker: service, presenter: presenter)
+        let interactor = FavoriteInteractor(dataBase: dataBase, presenter: presenter)
         controller.interactor = interactor
         controller.coordinator = self
         controller.title = "FAVORITOS"

@@ -11,23 +11,31 @@ import CoreData
 
 final class FavoriteDataBase: FavoriteDataBaseProtocol {
     
-    func saveOrRemoveFavorite(id: Int) {
+    func saveOrRemoveFavorite(request: FavoriteRequest) {
         var favoriteDataBase: Favorite?
-        if let favoriteDB = self.fetchFavorite(id: id) {
+        if let favoriteDB = self.fetchFavoriteById(id: request.id) {
             PersistentManager.shared.context.delete(favoriteDB)
         } else {
             favoriteDataBase = Favorite(context: PersistentManager.shared.context)
-            favoriteDataBase?.id = Int16(id)
+            favoriteDataBase?.id = Int16(request.id)
+            favoriteDataBase?.name = request.name
+            favoriteDataBase?.creationDate = request.creationDate
+            favoriteDataBase?.imageUrl = request.imageUrl
+            favoriteDataBase?.urlDetail = request.urlDetail
             PersistentManager.shared.saveContext()
         }
     }
     
-    func fetchFavorite(id: Int) -> Favorite? {
+    func fetchFavoriteById(id: Int) -> Favorite? {
         return PersistentManager.shared.fetchDataBase(Favorite.self, id: id)
     }
     
+     func fetchFavoriteList() -> [Favorite]? {
+        return PersistentManager.shared.fetchDataBase(Favorite.self)
+     }
+    
     func removeFavorite(id: Int) {
-        if let favoriteResult = self.fetchFavorite(id: id) {
+        if let favoriteResult = self.fetchFavoriteById(id: id) {
             PersistentManager.shared.context.delete(favoriteResult)
         }
     }

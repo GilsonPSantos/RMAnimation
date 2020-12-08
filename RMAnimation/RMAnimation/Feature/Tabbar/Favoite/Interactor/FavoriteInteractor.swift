@@ -11,18 +11,20 @@ import Foundation
 //MARK: - INTERACTOR CLASS -
 final class FavoriteInteractor {
     
-    private let worker: FavoriteWorkerProtocol
+    private let dataBase: FavoriteDataBaseProtocol
     private let presenter: FavoritePresenterProtocol?
     
-    init(worker: FavoriteWorkerProtocol, presenter: FavoritePresenterProtocol) {
-        self.worker = worker
+    init(dataBase: FavoriteDataBaseProtocol, presenter: FavoritePresenterProtocol) {
+        self.dataBase = dataBase
         self.presenter = presenter
     }
 }
 
 //MARK: - INTERACTOR PROTOCOL -
 extension FavoriteInteractor: FavoriteInteractorProtocol {
-    
+    func getFavoriteList() {
+        
+    }
 }
 
 //MARK: - AUX METHODS -

@@ -20,7 +20,13 @@ final class FavoritePresenter {
 
 //MARK: - PRESENTER PROTOCOL -
 extension FavoritePresenter: FavoritePresenterProtocol {
+    func handlerSuccess(response: FavoriteResponse) {
+        
+    }
     
+    func handlerEmpty() {
+        
+    }
 }
 
 //MARK: - AUX METHODS -

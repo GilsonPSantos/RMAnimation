@@ -49,8 +49,8 @@ extension DetailInteractor: DetailInteractorProtocol {
         }
     }
     
-    func addOrRemoveFavorite(id: Int) {
-        self.dataBase.saveOrRemoveFavorite(id: id)
+    func addOrRemoveFavorite(request: FavoriteRequest) {
+        self.dataBase.saveOrRemoveFavorite(request: request)
     }
     
     private func getCharacterInfo(url: String, semaphore: DispatchSemaphore) {
@@ -96,7 +96,7 @@ extension DetailInteractor {
         let urlImage = model.image ?? ""
         let originUrl = model.origin?.url ?? ""
         let locationUrl = model.location?.url ?? ""
-        let isFavorite = self.dataBase.fetchFavorite(id: id) != nil
+        let isFavorite = self.dataBase.fetchFavoriteById(id: id) != nil
         return DetailResponse(id: id, name: name, urlImage: urlImage, urlOrigin: originUrl, urlLocation: locationUrl, isFavorite: isFavorite)
     }
     

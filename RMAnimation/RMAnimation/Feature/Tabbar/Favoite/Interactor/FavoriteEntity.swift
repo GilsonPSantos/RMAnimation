@@ -10,7 +10,11 @@ import Foundation
 
 //MARK: - STRUCT REQUEST -
 struct FavoriteRequest: Encodable {
-    
+    let id: Int
+    let name: String
+    let creationDate: String
+    let imageUrl: String
+    let urlDetail: String
 }
 
 //MARK: - STRUCT RESPONSE -

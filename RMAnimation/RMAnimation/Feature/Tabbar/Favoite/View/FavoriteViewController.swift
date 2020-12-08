@@ -23,19 +23,65 @@ class FavoriteViewController: UIViewController {
 
 //MARK: - LIFE CYCLE -
 extension FavoriteViewController {
+    
+    override func loadView() {
+        super.loadView()
+        self.view = self.favoriteScreen
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.registerCell()
+        self.setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.favoriteScreen.favoriteTableView.reloadData()
     }
 }
 
 //MARK: - VIEW PROTOCOL -
 extension FavoriteViewController: FavoriteViewProtocol {
+    func showSuccess(viewData: FavoriteViewData) {
+        self.viewData = viewData
+        self.favoriteScreen.favoriteTableView.reloadData()
+    }
+    
+    func showEmptyMessage() {
+        self.favoriteScreen.favoriteTableView.isHidden = true
+        self.favoriteScreen.labelMessage.isHidden = false
+    }
+}
 
+//MARK: - TABLEVIEW DATASOURCE -
+extension FavoriteViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.favoriteScreen.favoriteTableView.dequeueReusableCell(withIdentifier: CharacterTableViewCell.CELL_ID) as! CharacterTableViewCell
+//        cell.setupCell(viewData: self.viewData.characters[indexPath.row])
+        return cell
+    }
+}
+
+//MARK: - TABLEVIEW DELEGATE -
+extension FavoriteViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }
 
 //MARK: - AUX METHODS -
 extension FavoriteViewController {
     private func registerCell() {
         self.favoriteScreen.favoriteTableView.register(CharacterTableViewCell.self, forCellReuseIdentifier: CharacterTableViewCell.CELL_ID)
+    }
+    
+    private func setupTableView() {
+        self.favoriteScreen.favoriteTableView.dataSource = self
+        self.favoriteScreen.favoriteTableView.delegate = self
     }
 }

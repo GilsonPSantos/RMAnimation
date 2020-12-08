@@ -10,5 +10,7 @@ import Foundation
 
 //MARK: - STRUCT VIEW DATA -
 struct FavoriteViewData {
-    
+    var isEmptyList = false
+    var emptyMessage = "Você não possui favoritos!"
+    var characters = [CharacterViewData]()
 }

@@ -10,6 +10,7 @@ import Foundation
 
 //MARK: - VIEW PROTOCOL -
 protocol FavoriteViewProtocol: class {
-    
+    func showSuccess(viewData: FavoriteViewData)
+    func showEmptyMessage()
 }
 

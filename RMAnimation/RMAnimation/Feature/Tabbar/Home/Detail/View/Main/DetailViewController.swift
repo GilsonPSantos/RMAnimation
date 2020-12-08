@@ -20,7 +20,8 @@ class DetailViewController: UIViewController {
     
     // MARK: IBACTIONS
     @objc private func addOrRemoveFavorite() {
-        self.interactor?.addOrRemoveFavorite(id: self.viewData.id)
+        let favoriteRequest = FavoriteRequest(id: self.viewData.id, name: self.viewData.name, creationDate: "", imageUrl: self.viewData.urlBanner, urlDetail: "")
+        self.interactor?.addOrRemoveFavorite(request: favoriteRequest)
         self.viewData.enableFavorite.toggle()
         let nameImage = self.viewData.enableFavorite ? "star.fill" : "star"
         self.navigationItem.rightBarButtonItem?.image = UIImage(systemName: nameImage)
