@@ -23,11 +23,17 @@ final class FavoriteInteractor {
 //MARK: - INTERACTOR PROTOCOL -
 extension FavoriteInteractor: FavoriteInteractorProtocol {
     func getFavoriteList() {
-        
+        guard let result = self.dataBase.fetchFavoriteList(), result.count > 0 else { self.presenter?.handlerEmpty()
+            return
+        }
+        let response = result.map { self.createResponse(favoriteDB: $0 )}
+        self.presenter?.handlerSuccess(response: response)
     }
 }
 
 //MARK: - AUX METHODS -
 extension FavoriteInteractor {
-    
+    private func createResponse(favoriteDB: Favorite) -> FavoriteRequestResponse {
+        FavoriteRequestResponse(id: Int(favoriteDB.id), name: favoriteDB.name ?? "", creationDate: favoriteDB.creationDate ?? "", imageUrl: favoriteDB.imageUrl ?? "", urlDetail: favoriteDB.urlDetail ?? "")
+    }
 }

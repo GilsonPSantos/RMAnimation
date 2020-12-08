@@ -9,7 +9,7 @@
 import Foundation
 
 protocol FavoriteDataBaseProtocol: class {
-    func saveOrRemoveFavorite(request: FavoriteRequest)
+    func saveOrRemoveFavorite(request: FavoriteRequestResponse)
     func fetchFavoriteById(id: Int) -> Favorite?
     func fetchFavoriteList() -> [Favorite]?
 }

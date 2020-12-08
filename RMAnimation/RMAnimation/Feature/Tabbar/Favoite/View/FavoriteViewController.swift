@@ -37,7 +37,7 @@ extension FavoriteViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.favoriteScreen.favoriteTableView.reloadData()
+        self.interactor?.getFavoriteList()
     }
 }
 
@@ -46,9 +46,12 @@ extension FavoriteViewController: FavoriteViewProtocol {
     func showSuccess(viewData: FavoriteViewData) {
         self.viewData = viewData
         self.favoriteScreen.favoriteTableView.reloadData()
+        self.favoriteScreen.labelMessage.isHidden = true
+        self.favoriteScreen.favoriteTableView.isHidden = false
     }
     
     func showEmptyMessage() {
+        self.favoriteScreen.labelMessage.text = self.viewData.emptyMessage
         self.favoriteScreen.favoriteTableView.isHidden = true
         self.favoriteScreen.labelMessage.isHidden = false
     }
@@ -57,12 +60,12 @@ extension FavoriteViewController: FavoriteViewProtocol {
 //MARK: - TABLEVIEW DATASOURCE -
 extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.viewData.characters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.favoriteScreen.favoriteTableView.dequeueReusableCell(withIdentifier: CharacterTableViewCell.CELL_ID) as! CharacterTableViewCell
-//        cell.setupCell(viewData: self.viewData.characters[indexPath.row])
+        cell.setupCell(viewData: self.viewData.characters[indexPath.row])
         return cell
     }
 }

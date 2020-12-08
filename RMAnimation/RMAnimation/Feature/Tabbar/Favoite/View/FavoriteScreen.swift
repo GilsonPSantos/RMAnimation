@@ -52,6 +52,7 @@ extension FavoriteScreen: ScreenViewProtocol {
     
     func setupAdditional() {
         self.favoriteTableView.backgroundColor = .systemBackground
+        self.backgroundColor = .systemBackground
         self.labelMessage.isHidden = true
     }
 }

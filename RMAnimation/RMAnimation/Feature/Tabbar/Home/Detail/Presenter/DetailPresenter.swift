@@ -39,7 +39,7 @@ extension DetailPresenter {
     private func createViewData(_ response: DetailResponse) -> DetailViewData {
         let originViewData = self.createLocationElementViewData(response.origin)
         let locationViewData = self.createLocationElementViewData(response.location)
-        return DetailViewData(id: response.id, name: response.name, urlBanner: response.urlImage, originElement: originViewData, locationElement: locationViewData, enableFavorite: response.isFavorite)
+        return DetailViewData(id: response.id, name: response.name, urlBanner: response.urlImage, originElement: originViewData, locationElement: locationViewData, enableFavorite: response.isFavorite, urlDetail: response.urlDetail)
     }
     
     private func createLocationElementViewData(_ response: LocationResponse) -> LocationElementViewData {

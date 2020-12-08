@@ -49,7 +49,7 @@ extension DetailInteractor: DetailInteractorProtocol {
         }
     }
     
-    func addOrRemoveFavorite(request: FavoriteRequest) {
+    func addOrRemoveFavorite(request: FavoriteRequestResponse) {
         self.dataBase.saveOrRemoveFavorite(request: request)
     }
     
@@ -92,12 +92,13 @@ extension DetailInteractor: DetailInteractorProtocol {
 extension DetailInteractor {
     private func createCharacterResponse(_ model: ResultModel) -> DetailResponse {
         let id = model.id ?? 0
+        let urlDetail = model.url ?? ""
         let name = model.name ?? ""
         let urlImage = model.image ?? ""
         let originUrl = model.origin?.url ?? ""
         let locationUrl = model.location?.url ?? ""
         let isFavorite = self.dataBase.fetchFavoriteById(id: id) != nil
-        return DetailResponse(id: id, name: name, urlImage: urlImage, urlOrigin: originUrl, urlLocation: locationUrl, isFavorite: isFavorite)
+        return DetailResponse(id: id, name: name, urlImage: urlImage, urlOrigin: originUrl, urlLocation: locationUrl, isFavorite: isFavorite, urlDetail: urlDetail)
     }
     
     private func crateLocationResponse(_ model: LocationModel) -> LocationResponse {

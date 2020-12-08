@@ -27,7 +27,6 @@ final class FavoriteCoordinator: FavoriteCoordinatorProtocol {
         controller.interactor = interactor
         controller.coordinator = self
         controller.title = "FAVORITOS"
-        controller.view.backgroundColor = .yellow
         controller.tabBarItem = UITabBarItem(title: "Favoritos", image: UIImage(systemName: "star"), tag: 1)
         self.navigationController.pushViewController(controller, animated: true)
         

@@ -16,6 +16,7 @@ struct DetailViewData {
     var originElement = LocationElementViewData()
     var locationElement = LocationElementViewData()
     var enableFavorite = false
+    var urlDetail = ""
 }
 
 struct LocationElementViewData {
