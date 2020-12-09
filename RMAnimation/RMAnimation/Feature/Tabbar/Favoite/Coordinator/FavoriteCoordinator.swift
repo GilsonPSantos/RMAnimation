@@ -12,7 +12,6 @@ import UIKit
 final class FavoriteCoordinator: FavoriteCoordinatorProtocol {
     
     var childCoordinators: [Coordinator] = []
-    
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -20,17 +19,23 @@ final class FavoriteCoordinator: FavoriteCoordinatorProtocol {
     }
     
     func start() {
-        let service = FavoriteService()
+        let dataBase = FavoriteDataBase()
         let controller = FavoriteViewController()
         let presenter = FavoritePresenter(view: controller)
-        let interactor = FavoriteInteractor(worker: service, presenter: presenter)
+        let interactor = FavoriteInteractor(dataBase: dataBase, presenter: presenter)
         controller.interactor = interactor
         controller.coordinator = self
         controller.title = "FAVORITOS"
-        controller.view.backgroundColor = .yellow
         controller.tabBarItem = UITabBarItem(title: "Favoritos", image: UIImage(systemName: "star"), tag: 1)
         self.navigationController.pushViewController(controller, animated: true)
         
+    }
+    
+    func showDetail(urlDetail: String, characterName: String) {
+        let detailCoordinator = DetailCoordinator(navigationController: self.navigationController, titleScreen: characterName, urlDetail: urlDetail)
+        detailCoordinator.parentCoordinator = self
+        self.childCoordinators.append(detailCoordinator)
+        detailCoordinator.start()
     }
     
     func childDidFinish(_ child: Coordinator?) {

@@ -10,5 +10,5 @@ import Foundation
 
 //MARK: - INTERACTOR PROTOCOL -
 protocol FavoriteInteractorProtocol: class {
-    
+    func getFavoriteList()
 }

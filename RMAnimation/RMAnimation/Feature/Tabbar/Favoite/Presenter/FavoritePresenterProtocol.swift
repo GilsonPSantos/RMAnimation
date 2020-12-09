@@ -10,6 +10,7 @@ import Foundation
 
 //MARK: - PRESENTER PROTOCOL -
 protocol FavoritePresenterProtocol: class {
-    
+    func handlerSuccess(response: [FavoriteRequestResponse])
+    func handlerEmpty()
 }
 

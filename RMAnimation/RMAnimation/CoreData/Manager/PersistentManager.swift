@@ -62,5 +62,15 @@ extension PersistentManager {
             return nil
         }
     }
+    
+    func fetchDataBase<T: NSManagedObject>(_ dataBase: T.Type) -> [T]? {
+        let fetchRequest: NSFetchRequest<T> = NSFetchRequest<T>(entityName: String(describing: T.self))
+        do {
+            let result = try PersistentManager.shared.context.fetch(fetchRequest)
+            return result
+        } catch {
+            return nil
+        }
+    }
 }
 

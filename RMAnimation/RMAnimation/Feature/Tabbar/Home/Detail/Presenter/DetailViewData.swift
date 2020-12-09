@@ -11,10 +11,12 @@ import Foundation
 //MARK: - STRUCT VIEW DATA -
 struct DetailViewData {
     var id = -1
+    var name = ""
     var urlBanner = ""
     var originElement = LocationElementViewData()
     var locationElement = LocationElementViewData()
     var enableFavorite = false
+    var urlDetail = ""
 }
 
 struct LocationElementViewData {

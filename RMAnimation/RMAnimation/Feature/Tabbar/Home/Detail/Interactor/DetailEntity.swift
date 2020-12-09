@@ -23,6 +23,7 @@ struct DetailResponse {
     var origin = LocationResponse()
     var location = LocationResponse()
     var isFavorite = false
+    var urlDetail = ""
 }
 
 struct LocationResponse {

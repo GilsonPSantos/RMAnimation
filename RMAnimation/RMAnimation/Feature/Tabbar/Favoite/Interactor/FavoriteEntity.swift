@@ -8,12 +8,11 @@
 
 import Foundation
 
-//MARK: - STRUCT REQUEST -
-struct FavoriteRequest: Encodable {
-    
-}
-
-//MARK: - STRUCT RESPONSE -
-struct FavoriteResponse {
-    
+//MARK: - STRUCT REQUEST/RESPONSE -
+struct FavoriteRequestResponse: Encodable {
+    let id: Int
+    let name: String
+    let creationDate: String
+    let imageUrl: String
+    let urlDetail: String
 }
