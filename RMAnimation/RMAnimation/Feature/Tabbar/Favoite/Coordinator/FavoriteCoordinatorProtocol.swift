@@ -11,5 +11,5 @@ import Foundation
 
 //MARK: - COORDINATOR PROTOCOL -
 protocol FavoriteCoordinatorProtocol: MainCoordinator {
-    
+    func showDetail(urlDetail: String, characterName: String)
 }
