@@ -37,7 +37,7 @@ extension HomePresenter: HomePresenterProtocol {
 //MARK: - AUX METHODS -
 extension HomePresenter {
     private func createViewData(_ response: HomeResponse) -> HomeViewData {
-        var viewData = HomeViewData(isFinish: response.isLastPage, nextPage: response.nextPage)
+        var viewData = HomeViewData(isFinish: response.isLastPage, nextPage: response.nextPage, isPaginator: true)
         viewData.characters = response.characters.map({
             return CharacterViewData(id: $0.id, name: $0.name, creationDate: "Criado em " + $0.creationDate.convertDateToStringDDMMYYYY(), imageUrl: $0.urlImage, urlDetail: $0.urlDetail)
         })
