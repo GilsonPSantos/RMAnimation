@@ -16,6 +16,7 @@ class HomeScreen: UIView {
     lazy var homeTableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
+        tableView.accessibilityIdentifier = Identifiers.homeTableView
         return tableView
     }()
     

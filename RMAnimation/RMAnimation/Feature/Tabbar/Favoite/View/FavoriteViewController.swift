@@ -65,6 +65,7 @@ extension FavoriteViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.favoriteScreen.favoriteTableView.dequeueReusableCell(withIdentifier: CharacterTableViewCell.CELL_ID) as! CharacterTableViewCell
+        cell.accessibilityIdentifier = Identifiers.favoriteTableViewCell + "\(indexPath.row)"
         cell.setupCell(viewData: self.viewData.characters[indexPath.row])
         return cell
     }

@@ -15,6 +15,7 @@ class CharacterScreen: UIView {
         imageView.contentMode = .scaleAspectFit
         imageView.isAccessibilityElement = true
         imageView.backgroundColor = .blue
+        imageView.accessibilityIdentifier = Identifiers.imageCharacter
         return imageView
     }()
     
@@ -24,6 +25,7 @@ class CharacterScreen: UIView {
         label.font = .boldSystemFont(ofSize: 16)
         label.textAlignment = .left
         label.numberOfLines = 1
+        label.accessibilityIdentifier = Identifiers.labelNameCharacter
         return label
     }()
     
@@ -33,6 +35,7 @@ class CharacterScreen: UIView {
         label.font = .systemFont(ofSize: 12)
         label.textAlignment = .left
         label.numberOfLines = 1
+        label.accessibilityIdentifier = Identifiers.labelDateCharacter
         return label
     }()
     
@@ -42,6 +45,7 @@ class CharacterScreen: UIView {
         imageView.isAccessibilityElement = true
         imageView.tintColor = .systemOrange
         imageView.image = UIImage(systemName: "chevron.right")
+        imageView.accessibilityIdentifier = Identifiers.imageArrowCharacter
         return imageView
     }()
 

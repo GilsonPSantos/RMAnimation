@@ -19,6 +19,7 @@ class DetailScreen: UIView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         imageView.isAccessibilityElement = true
+        imageView.accessibilityIdentifier = Identifiers.imageBannerDetail
         return imageView
     }()
     
@@ -62,6 +63,8 @@ extension DetailScreen: ScreenViewProtocol {
     }
     
     func setupAdditional() {
+        self.descriptionOrigin.accessibilityIdentifier = Identifiers.descriptionOriginView
+        self.descriptionLocation.accessibilityIdentifier = Identifiers.descriptionLocationView
         self.backgroundColor = .systemBackground
     }
 }

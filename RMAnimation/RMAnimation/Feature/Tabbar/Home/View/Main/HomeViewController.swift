@@ -57,6 +57,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.homeScreen.homeTableView.dequeueReusableCell(withIdentifier: CharacterTableViewCell.CELL_ID) as! CharacterTableViewCell
+        cell.accessibilityIdentifier = Identifiers.homeTableViewCell + "\(indexPath.row)"
         cell.setupCell(viewData: self.viewData.characters[indexPath.row])
         return cell
     }

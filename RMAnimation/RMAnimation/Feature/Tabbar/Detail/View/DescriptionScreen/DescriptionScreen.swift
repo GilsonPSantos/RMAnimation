@@ -18,6 +18,7 @@ class DescriptionScreen: UIView {
         label.numberOfLines = 1
         label.backgroundColor = .systemPink
         label.text = "Origin:"
+        label.accessibilityIdentifier = Identifiers.labelTitleDetail
         return label
     }()
     
@@ -28,6 +29,7 @@ class DescriptionScreen: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.backgroundColor = .systemPink
+        label.accessibilityIdentifier = Identifiers.labelTitleNameDetail
         return label
     }()
     
@@ -37,6 +39,7 @@ class DescriptionScreen: UIView {
         label.font = .boldSystemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
+        label.accessibilityIdentifier = Identifiers.labelNameDetail
         return label
     }()
     
@@ -47,6 +50,7 @@ class DescriptionScreen: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.backgroundColor = .systemPink
+        label.accessibilityIdentifier = Identifiers.labelTitleTypeDetail
         return label
     }()
     
@@ -56,6 +60,7 @@ class DescriptionScreen: UIView {
         label.font = .boldSystemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
+        label.accessibilityIdentifier = Identifiers.labelTypeDetail
         return label
     }()
     
@@ -66,6 +71,7 @@ class DescriptionScreen: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.backgroundColor = .systemPink
+        label.accessibilityIdentifier = Identifiers.labelTitleDimensionDetail
         return label
     }()
     
@@ -75,6 +81,7 @@ class DescriptionScreen: UIView {
         label.font = .boldSystemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
+        label.accessibilityIdentifier = Identifiers.labelDimensionDetail
         return label
     }()
 
@@ -130,5 +137,6 @@ extension DescriptionScreen: ScreenViewProtocol {
     }
     
     func setupAdditional() {
+        
     }
 }
