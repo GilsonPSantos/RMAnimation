@@ -68,24 +68,35 @@ extension HomeViewController: UITableViewDelegate {
         let characterRow = self.viewData.characters[indexPath.row]
         self.coordinator?.showDetail(urlDetail: characterRow.urlDetail, characterName: characterRow.name)
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == self.viewData.characters.count - 4, !self.viewData.isFinish {
+            self.interactor?.getCharacter(request: HomeRequest(url: self.viewData.nextPage))
+        }
+    }
 }
 
 //MARK: - VIEW PROTOCOL -
 extension HomeViewController: HomeViewProtocol {
     func showLoading() {
+        guard !self.viewData.isPaginator else { return }
         self.homeScreen.loadingView.isHidden = false
         self.homeScreen.errorView.isHidden = true
         self.homeScreen.homeTableView.isHidden = true
     }
     
     func showSuccess(viewData: HomeViewData) {
-        self.viewData = viewData
+        self.viewData.nextPage = viewData.nextPage
+        self.viewData.isFinish = viewData.isFinish
+        self.viewData.isPaginator = viewData.isPaginator
+        self.viewData.characters += viewData.characters
         self.homeScreen.homeTableView.isHidden = false
         self.homeScreen.homeTableView.reloadData()
         self.homeScreen.loadingView.isHidden = true
     }
     
     func showError() {
+        guard !self.viewData.isPaginator else { return }
         self.homeScreen.errorView.isHidden = false
         self.homeScreen.homeTableView.isHidden = true
         self.homeScreen.loadingView.isHidden = true

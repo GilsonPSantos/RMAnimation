@@ -13,6 +13,7 @@ struct HomeViewData {
     var isFinish = false
     var nextPage = ""
     var characters = [CharacterViewData]()
+    var isPaginator = false
 }
 
 struct CharacterViewData {
