@@ -30,11 +30,15 @@
 		0252E481258191C100B8040D /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E480258191C100B8040D /* HomeInteractorTests.swift */; };
 		0252E4832581921700B8040D /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E4822581921700B8040D /* HomePresenterTests.swift */; };
 		0252E4852581923C00B8040D /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E4842581923C00B8040D /* HomeViewControllerTests.swift */; };
+		0252E487258246E700B8040D /* character_list_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 0252E486258246E700B8040D /* character_list_success.json */; };
+		0252E489258277C700B8040D /* character_success_only_one_valid_element_in_the_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 0252E488258277C600B8040D /* character_success_only_one_valid_element_in_the_list.json */; };
+		0252E48D258279FB00B8040D /* character_empty_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 0252E48C258279FB00B8040D /* character_empty_list.json */; };
+		0252E48F2582963300B8040D /* character_error_error_in_json_structure.json in Resources */ = {isa = PBXBuildFile; fileRef = 0252E48E2582963200B8040D /* character_error_error_in_json_structure.json */; };
+		0252E491258296CA00B8040D /* character_error_required_fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 0252E490258296CA00B8040D /* character_error_required_fields.json */; };
 		027C7A692575749D00152575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C7A682575749D00152575 /* AppDelegate.swift */; };
 		027C7A732575749D00152575 /* RMAnimation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 027C7A712575749D00152575 /* RMAnimation.xcdatamodeld */; };
 		027C7A75257574A300152575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027C7A74257574A300152575 /* Assets.xcassets */; };
 		027C7A78257574A300152575 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027C7A76257574A300152575 /* LaunchScreen.storyboard */; };
-		027C7A83257574A300152575 /* RMAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C7A82257574A300152575 /* RMAnimationTests.swift */; };
 		027C7A8E257574A300152575 /* RMAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C7A8D257574A300152575 /* RMAnimationUITests.swift */; };
 		027C7AA3257575DD00152575 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C7AA2257575DD00152575 /* CoordinatorProtocol.swift */; };
 		0294DCF22576C293009FD118 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294DCF12576C293009FD118 /* CharacterModel.swift */; };
@@ -127,6 +131,11 @@
 		0252E480258191C100B8040D /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
 		0252E4822581921700B8040D /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		0252E4842581923C00B8040D /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		0252E486258246E700B8040D /* character_list_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = character_list_success.json; sourceTree = "<group>"; };
+		0252E488258277C600B8040D /* character_success_only_one_valid_element_in_the_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = character_success_only_one_valid_element_in_the_list.json; sourceTree = "<group>"; };
+		0252E48C258279FB00B8040D /* character_empty_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = character_empty_list.json; sourceTree = "<group>"; };
+		0252E48E2582963200B8040D /* character_error_error_in_json_structure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = character_error_error_in_json_structure.json; sourceTree = "<group>"; };
+		0252E490258296CA00B8040D /* character_error_required_fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = character_error_required_fields.json; sourceTree = "<group>"; };
 		027C7A652575749D00152575 /* RMAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027C7A682575749D00152575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027C7A722575749D00152575 /* RMAnimation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMAnimation.xcdatamodel; sourceTree = "<group>"; };
@@ -134,7 +143,6 @@
 		027C7A77257574A300152575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027C7A79257574A300152575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027C7A7E257574A300152575 /* RMAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		027C7A82257574A300152575 /* RMAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAnimationTests.swift; sourceTree = "<group>"; };
 		027C7A84257574A300152575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027C7A89257574A300152575 /* RMAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027C7A8D257574A300152575 /* RMAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAnimationUITests.swift; sourceTree = "<group>"; };
@@ -321,11 +329,6 @@
 		0252E46025818BA700B8040D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				0252E46125818BAD00B8040D /* Extension */,
-				0252E46425818BF200B8040D /* BaseTests */,
-				0252E46525818BF900B8040D /* HomeTests */,
-				0252E46625818C0100B8040D /* DetailTests */,
-				0252E46725818C0900B8040D /* FavoriteTests */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -395,6 +398,11 @@
 		0252E46E25818D4700B8040D /* Json */ = {
 			isa = PBXGroup;
 			children = (
+				0252E486258246E700B8040D /* character_list_success.json */,
+				0252E488258277C600B8040D /* character_success_only_one_valid_element_in_the_list.json */,
+				0252E48C258279FB00B8040D /* character_empty_list.json */,
+				0252E48E2582963200B8040D /* character_error_error_in_json_structure.json */,
+				0252E490258296CA00B8040D /* character_error_required_fields.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -497,7 +505,11 @@
 			isa = PBXGroup;
 			children = (
 				0252E46025818BA700B8040D /* Helper */,
-				027C7A82257574A300152575 /* RMAnimationTests.swift */,
+				0252E46125818BAD00B8040D /* Extension */,
+				0252E46425818BF200B8040D /* BaseTests */,
+				0252E46525818BF900B8040D /* HomeTests */,
+				0252E46625818C0100B8040D /* DetailTests */,
+				0252E46725818C0900B8040D /* FavoriteTests */,
 				027C7A84257574A300152575 /* Info.plist */,
 			);
 			path = RMAnimationTests;
@@ -949,6 +961,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0252E48D258279FB00B8040D /* character_empty_list.json in Resources */,
+				0252E487258246E700B8040D /* character_list_success.json in Resources */,
+				0252E491258296CA00B8040D /* character_error_required_fields.json in Resources */,
+				0252E48F2582963300B8040D /* character_error_error_in_json_structure.json in Resources */,
+				0252E489258277C700B8040D /* character_success_only_one_valid_element_in_the_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,7 +1160,6 @@
 				0252E4832581921700B8040D /* HomePresenterTests.swift in Sources */,
 				0252E481258191C100B8040D /* HomeInteractorTests.swift in Sources */,
 				0252E47425818DA600B8040D /* HomeServiceMock.swift in Sources */,
-				027C7A83257574A300152575 /* RMAnimationTests.swift in Sources */,
 				0252E46925818C3800B8040D /* JsonName.swift in Sources */,
 				0252E47625818E9400B8040D /* HomeViewControllerMock.swift in Sources */,
 				0252E47825818F1200B8040D /* HomePresenterMock.swift in Sources */,
