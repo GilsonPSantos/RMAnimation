@@ -1,18 +1,18 @@
 //
-//  HomeViewControllerMock.swift
+//  DetailViewControllerMock.swift
 //  RMAnimationTests
 //
-//  Created by Gilson Santos on 09/12/20.
+//  Created by Gilson Santos on 11/12/20.
 //  Copyright © 2020 Gilson Santos. All rights reserved.
 //
 
 import UIKit
 @testable import RMAnimation
 
-final class HomeViewControllerMock: UIViewController, HomeViewProtocol {
+final class DetailViewControllerMock: UIViewController, DetailViewProtocol {
     
     var stateView: StateView = .none
-    var viewData: HomeViewData?
+    var viewData: DetailViewData?
     var calledShowLoading = false
     
     func showLoading() {
@@ -21,7 +21,7 @@ final class HomeViewControllerMock: UIViewController, HomeViewProtocol {
         self.calledShowLoading = true
     }
     
-    func showSuccess(viewData: HomeViewData) {
+    func showSuccess(viewData: DetailViewData) {
         self.stateView = .success
         self.viewData = viewData
     }

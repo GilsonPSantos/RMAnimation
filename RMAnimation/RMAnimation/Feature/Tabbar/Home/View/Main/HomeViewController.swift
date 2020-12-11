@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     // MARK: CONSTANTS
-    let homeScreen = HomeScreen()
+    var homeScreen = HomeScreen()
     
     // MARK: VARIABLES
     var interactor: HomeInteractorProtocol?

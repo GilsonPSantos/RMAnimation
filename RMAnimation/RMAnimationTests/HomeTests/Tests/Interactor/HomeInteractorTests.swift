@@ -59,6 +59,7 @@ extension HomeInteractorTests {
     func test_success_response() {
         self.serviceMock.fileName = JsonName.CHARACTER_LIST_SUCCESS
         self.interactor.getCharacter(request: self.request)
+        XCTAssertTrue(self.presenterMock.calledStartRequest)
         guard let response = self.presenterMock.response,
             let lastCharacterInService = self.presenterMock.response?.characters.last else { XCTFail(); return }
         

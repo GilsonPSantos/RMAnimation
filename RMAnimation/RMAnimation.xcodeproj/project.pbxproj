@@ -17,6 +17,14 @@
 		021128792575B38E00FE6016 /* FavoriteViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211286E2575B38E00FE6016 /* FavoriteViewProtocol.swift */; };
 		0211287A2575B38E00FE6016 /* FavoriteViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211286F2575B38E00FE6016 /* FavoriteViewData.swift */; };
 		0211287B2575B38E00FE6016 /* FavoriteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021128702575B38E00FE6016 /* FavoriteEntity.swift */; };
+		022900362584136000470616 /* DetailViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022900352584136000470616 /* DetailViewControllerMock.swift */; };
+		02290038258413DF00470616 /* DetailPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290037258413DF00470616 /* DetailPresenterMock.swift */; };
+		0229003C2584197F00470616 /* DetailServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229003B2584197F00470616 /* DetailServiceMock.swift */; };
+		0229004125841DD300470616 /* detail_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229004025841DD300470616 /* detail_success.json */; };
+		0229004325841DE700470616 /* origin_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229004225841DE700470616 /* origin_success.json */; };
+		0229004525841DF500470616 /* location_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229004425841DF500470616 /* location_success.json */; };
+		0229004925841E8000470616 /* DetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229004825841E8000470616 /* DetailInteractorTests.swift */; };
+		0229004C25841F1500470616 /* DetailDataBaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229004B25841F1500470616 /* DetailDataBaseMock.swift */; };
 		0252E445257EEDB900B8040D /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E444257EEDB900B8040D /* FavoriteScreen.swift */; };
 		0252E45E258181D600B8040D /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E45D258181D600B8040D /* Identifiers.swift */; };
 		0252E45F258181D600B8040D /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E45D258181D600B8040D /* Identifiers.swift */; };
@@ -119,6 +127,14 @@
 		0211286E2575B38E00FE6016 /* FavoriteViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewProtocol.swift; sourceTree = "<group>"; };
 		0211286F2575B38E00FE6016 /* FavoriteViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewData.swift; sourceTree = "<group>"; };
 		021128702575B38E00FE6016 /* FavoriteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntity.swift; sourceTree = "<group>"; };
+		022900352584136000470616 /* DetailViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerMock.swift; sourceTree = "<group>"; };
+		02290037258413DF00470616 /* DetailPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterMock.swift; sourceTree = "<group>"; };
+		0229003B2584197F00470616 /* DetailServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailServiceMock.swift; sourceTree = "<group>"; };
+		0229004025841DD300470616 /* detail_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = detail_success.json; sourceTree = "<group>"; };
+		0229004225841DE700470616 /* origin_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = origin_success.json; sourceTree = "<group>"; };
+		0229004425841DF500470616 /* location_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = location_success.json; sourceTree = "<group>"; };
+		0229004825841E8000470616 /* DetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorTests.swift; sourceTree = "<group>"; };
+		0229004B25841F1500470616 /* DetailDataBaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataBaseMock.swift; sourceTree = "<group>"; };
 		0252E444257EEDB900B8040D /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
 		0252E45D258181D600B8040D /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		0252E46225818BCC00B8040D /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
@@ -318,6 +334,115 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0229002E2584129400470616 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0229004725841E6B00470616 /* Presenter */,
+				0229004625841E6300470616 /* Interactor */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		0229002F2584129D00470616 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0229004A25841F0100470616 /* DataBase */,
+				02290034258412BE00470616 /* View */,
+				02290033258412B900470616 /* Presenter */,
+				02290032258412B200470616 /* Interactor */,
+				02290031258412AE00470616 /* Service */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		02290030258412A200470616 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				0229003F25841D3400470616 /* Detail */,
+				0229003E25841D3000470616 /* Origin */,
+				0229003D25841D2700470616 /* Location */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		02290031258412AE00470616 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0229003B2584197F00470616 /* DetailServiceMock.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		02290032258412B200470616 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		02290033258412B900470616 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				02290037258413DF00470616 /* DetailPresenterMock.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		02290034258412BE00470616 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				022900352584136000470616 /* DetailViewControllerMock.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0229003D25841D2700470616 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				0229004425841DF500470616 /* location_success.json */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		0229003E25841D3000470616 /* Origin */ = {
+			isa = PBXGroup;
+			children = (
+				0229004225841DE700470616 /* origin_success.json */,
+			);
+			path = Origin;
+			sourceTree = "<group>";
+		};
+		0229003F25841D3400470616 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0229004025841DD300470616 /* detail_success.json */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		0229004625841E6300470616 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0229004825841E8000470616 /* DetailInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0229004725841E6B00470616 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0229004A25841F0100470616 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				0229004B25841F1500470616 /* DetailDataBaseMock.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		0252E45C258181B200B8040D /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +488,9 @@
 		0252E46625818C0100B8040D /* DetailTests */ = {
 			isa = PBXGroup;
 			children = (
+				02290030258412A200470616 /* Json */,
+				0229002F2584129D00470616 /* Mock */,
+				0229002E2584129400470616 /* Tests */,
 			);
 			path = DetailTests;
 			sourceTree = "<group>";
@@ -961,10 +1089,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0229004325841DE700470616 /* origin_success.json in Resources */,
 				0252E48D258279FB00B8040D /* character_empty_list.json in Resources */,
 				0252E487258246E700B8040D /* character_list_success.json in Resources */,
+				0229004125841DD300470616 /* detail_success.json in Resources */,
 				0252E491258296CA00B8040D /* character_error_required_fields.json in Resources */,
 				0252E48F2582963300B8040D /* character_error_error_in_json_structure.json in Resources */,
+				0229004525841DF500470616 /* location_success.json in Resources */,
 				0252E489258277C700B8040D /* character_success_only_one_valid_element_in_the_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1154,13 +1285,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0252E46B25818C6400B8040D /* BaseServiceTests.swift in Sources */,
+				0229004925841E8000470616 /* DetailInteractorTests.swift in Sources */,
+				02290038258413DF00470616 /* DetailPresenterMock.swift in Sources */,
 				0252E4852581923C00B8040D /* HomeViewControllerTests.swift in Sources */,
 				0252E47A25818FE000B8040D /* HomeInteractorMock.swift in Sources */,
 				0252E46325818BCC00B8040D /* XCTestCaseExtension.swift in Sources */,
+				022900362584136000470616 /* DetailViewControllerMock.swift in Sources */,
 				0252E4832581921700B8040D /* HomePresenterTests.swift in Sources */,
+				0229003C2584197F00470616 /* DetailServiceMock.swift in Sources */,
 				0252E481258191C100B8040D /* HomeInteractorTests.swift in Sources */,
 				0252E47425818DA600B8040D /* HomeServiceMock.swift in Sources */,
 				0252E46925818C3800B8040D /* JsonName.swift in Sources */,
+				0229004C25841F1500470616 /* DetailDataBaseMock.swift in Sources */,
 				0252E47625818E9400B8040D /* HomeViewControllerMock.swift in Sources */,
 				0252E47825818F1200B8040D /* HomePresenterMock.swift in Sources */,
 			);

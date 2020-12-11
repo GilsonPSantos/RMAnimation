@@ -15,6 +15,7 @@ final class HomeInteractorMock: HomeInteractorProtocol {
     private let presenter: HomePresenterProtocol?
     var model: CharacterModel?
     var stateView: StateView = .none
+    var calledgetCharacter = false
     
     init(worker: BaseWorkerProtocol, presenter: HomePresenterProtocol) {
         self.worker = worker
@@ -22,6 +23,7 @@ final class HomeInteractorMock: HomeInteractorProtocol {
     }
     
     func getCharacter(request: HomeRequest) {
+        self.calledgetCharacter = true
         self.worker.getService(url: request.url, CharacterModel.self) { (result) in
             switch result {
             case .success(let characterModel):

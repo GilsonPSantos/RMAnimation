@@ -1,22 +1,22 @@
 //
-//  HomePresenterMock.swift
+//  DetailPresenterMock.swift
 //  RMAnimationTests
 //
-//  Created by Gilson Santos on 09/12/20.
+//  Created by Gilson Santos on 11/12/20.
 //  Copyright © 2020 Gilson Santos. All rights reserved.
 //
 
 import Foundation
 @testable import RMAnimation
 
-final class HomePresenterMock: HomePresenterProtocol {
+final class DetailPresenterMock: DetailPresenterProtocol {
     
     var stateView: StateView = .none
-    var response: HomeResponse?
-    private weak var view: HomeViewProtocol?
+    var response: DetailResponse?
+    private weak var view: DetailViewProtocol?
     var calledStartRequest = false
     
-    init(view: HomeViewProtocol) {
+    init(view: DetailViewProtocol) {
         self.view = view
     }
     
@@ -26,7 +26,7 @@ final class HomePresenterMock: HomePresenterProtocol {
         self.calledStartRequest = true
     }
     
-    func handlerSuccess(response: HomeResponse) {
+    func handlerSuccess(response: DetailResponse) {
         self.stateView = .success
         self.response = response
     }
