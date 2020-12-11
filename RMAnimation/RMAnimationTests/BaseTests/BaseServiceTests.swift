@@ -35,13 +35,13 @@ class BaseServiceTests: BaseTestProtocol {
     
     func getServiceMock(fileName: String) -> Data {
         guard let pathUrl = Bundle(for: Self.self).url(forResource: fileName, withExtension: "json") else {
-            fatalError("Erro ao buscar o arquivo.")
+            return Data()
         }
         do {
             let data = try Data(contentsOf: pathUrl)
             return data
         } catch {
-            fatalError("Erro ao transformar o Data.")
+            return Data()
         }
     }
 }

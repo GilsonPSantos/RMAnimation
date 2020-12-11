@@ -120,4 +120,12 @@ extension HomeInteractorTests {
         XCTAssertEqual(self.presenterMock.stateView, StateView.error, "Error - StateView different from error")
         XCTAssertNil(self.presenterMock.response, "Error - response different from nil")
     }
+    
+    func test_error_empty_url() {
+        self.serviceMock.statusService = .success
+        self.serviceMock.fileName = JsonName.CHARACTER_LIST_SUCCESS
+        self.interactor.getCharacter(request: HomeRequest(url: ""))
+        XCTAssertEqual(self.presenterMock.stateView, StateView.error, "Error - StateView different from error")
+        XCTAssertNil(self.presenterMock.response, "Error - response different from nil")
+    }
 }
