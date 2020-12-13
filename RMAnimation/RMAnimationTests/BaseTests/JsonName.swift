@@ -16,4 +16,8 @@ struct JsonName {
     static let CHARACTER_ERROR_REQUIRED_FIELDS = "character_error_required_fields"
     
     static let DETAIL_SUCCESS = "detail_success"
+    static let DETAIL_EMPTY = "detail_empty"
+    
+    static let DETAIL_WITH_ORIGIN_EMPTY = "detail_with_origin_empty"
+    static let DETAIL_WITH_LOCATION_EMPTY = "detail_with_location_empty"
 }

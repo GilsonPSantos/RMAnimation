@@ -101,4 +101,32 @@ extension DetailInteractorTests {
             XCTAssertNil(self.presenterMock.response, "Error - response different from nil")
         }
     }
+    
+    func test_error_empty_detail() {
+        self.serviceMock.fileName = JsonName.DETAIL_EMPTY
+        self.interactor.getDetail(request: self.request)
+        self.wait {
+            XCTAssertEqual(self.presenterMock.stateView, StateView.error, "Error - StateView different from error")
+            XCTAssertNil(self.presenterMock.response, "Error - response different from nil")
+        }
+    }
+    
+    func test_error_detail_with_origin_empty() {
+        self.serviceMock.fileName = JsonName.DETAIL_WITH_ORIGIN_EMPTY
+        self.interactor.getDetail(request: self.request)
+        self.wait {
+            XCTAssertEqual(self.presenterMock.stateView, StateView.error, "Error - StateView different from error")
+            XCTAssertNil(self.presenterMock.response, "Error - response different from nil")
+        }
+    }
+    
+    func test_error_detail_with_location_empty() {
+        self.serviceMock.fileName = JsonName.DETAIL_WITH_LOCATION_EMPTY
+        self.interactor.getDetail(request: self.request)
+        self.wait {
+            XCTAssertEqual(self.presenterMock.stateView, StateView.error, "Error - StateView different from error")
+            XCTAssertNil(self.presenterMock.response, "Error - response different from nil")
+        }
+    }
+    
 }
