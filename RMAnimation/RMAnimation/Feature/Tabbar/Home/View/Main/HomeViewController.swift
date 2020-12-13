@@ -69,9 +69,10 @@ extension HomeViewController: UITableViewDelegate {
         let characterRow = self.viewData.characters[indexPath.row]
         self.coordinator?.showDetail(urlDetail: characterRow.urlDetail, characterName: characterRow.name)
     }
-    
+        
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == self.viewData.characters.count - 4, !self.viewData.isFinish {
+        guard let lastVisibleRow = tableView.indexPathsForVisibleRows?.last?.row else { return }
+        if indexPath.row == self.viewData.characters.count - 4, lastVisibleRow == indexPath.row, !self.viewData.isFinish {
             self.interactor?.getCharacter(request: HomeRequest(url: self.viewData.nextPage))
         }
     }
