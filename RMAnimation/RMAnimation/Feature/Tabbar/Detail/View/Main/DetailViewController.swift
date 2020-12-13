@@ -26,6 +26,12 @@ class DetailViewController: UIViewController {
         let nameImage = self.viewData.enableFavorite ? "star.fill" : "star"
         self.navigationItem.rightBarButtonItem?.image = UIImage(systemName: nameImage)
     }
+    
+    @objc private func reload() {
+        self.detailScreen.reloadAnimation {
+            self.interactor?.getDetail(request: DetailRequest(url: self.urlDetail))
+        }
+    }
 }
 
 //MARK: - LIFE CYCLE -
@@ -36,10 +42,15 @@ extension DetailViewController {
         self.urlDetail = urlDetail
     }
     
+    override func loadView() {
+        super.loadView()
+        self.view = detailScreen
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view = detailScreen
         self.setupNavigation()
+        self.addGesture()
         self.interactor?.getDetail(request: DetailRequest(url: self.urlDetail))
     }
     
@@ -98,5 +109,10 @@ extension DetailViewController {
     
     private func setupNavigation() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: #selector(self.addOrRemoveFavorite))
+    }
+    
+    private func addGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.reload))
+        self.detailScreen.errorView.addGestureRecognizer(tapGesture)
     }
 }

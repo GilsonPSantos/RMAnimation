@@ -68,3 +68,17 @@ extension DetailScreen: ScreenViewProtocol {
         self.backgroundColor = .systemBackground
     }
 }
+
+//MARK: - AUX METHODS -
+extension DetailScreen {
+    func reloadAnimation(_ completion: @escaping () -> Void) {
+        UIView.animate(withDuration:0.2, animations: { () -> Void in
+            self.errorView.imageReload.transform = CGAffineTransform(rotationAngle: CGFloat(CGFloat(Double.pi)))
+        })
+        UIView.animate(withDuration: 0.2, delay: 0.15, options: .curveEaseIn, animations: { () -> Void in
+            self.errorView.imageReload.transform = CGAffineTransform(rotationAngle: CGFloat(CGFloat(Double.pi * 2)))
+        }) { (isAnimationComplete) in
+            completion()
+        }
+    }
+}
