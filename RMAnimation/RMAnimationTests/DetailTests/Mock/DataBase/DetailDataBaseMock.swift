@@ -16,8 +16,12 @@ final class DetailDataBaseMock: FavoriteDataBaseProtocol {
     func saveOrRemoveFavorite(request: FavoriteRequestResponse) {
         if let favoriteList = self.dataBase, let index = favoriteList.firstIndex(where: { request.id == $0.id}) {
             self.dataBase?.remove(at: index)
+            if self.dataBase?.count == 0 {
+                self.dataBase = nil
+            }
         } else {
-            let favorite = Favorite()
+            self.dataBase = []
+            let favorite = Favorite(context: PersistentManager.shared.context)
             favorite.id = Int16(request.id)
             favorite.creationDate = request.creationDate
             favorite.imageUrl = request.imageUrl

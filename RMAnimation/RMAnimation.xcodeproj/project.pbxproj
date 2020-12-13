@@ -36,6 +36,7 @@
 		0229005E25866C6200470616 /* origin_error_required_fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229005D25866C6200470616 /* origin_error_required_fields.json */; };
 		0229006025866CAA00470616 /* detail_with_location_error_required_fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229005F25866CAA00470616 /* detail_with_location_error_required_fields.json */; };
 		0229006225866CD000470616 /* location_error_required_fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229006125866CD000470616 /* location_error_required_fields.json */; };
+		0229006425866D7100470616 /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229006325866D7100470616 /* DetailPresenterTests.swift */; };
 		0252E445257EEDB900B8040D /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E444257EEDB900B8040D /* FavoriteScreen.swift */; };
 		0252E45E258181D600B8040D /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E45D258181D600B8040D /* Identifiers.swift */; };
 		0252E45F258181D600B8040D /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E45D258181D600B8040D /* Identifiers.swift */; };
@@ -157,6 +158,7 @@
 		0229005D25866C6200470616 /* origin_error_required_fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = origin_error_required_fields.json; sourceTree = "<group>"; };
 		0229005F25866CAA00470616 /* detail_with_location_error_required_fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = detail_with_location_error_required_fields.json; sourceTree = "<group>"; };
 		0229006125866CD000470616 /* location_error_required_fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = location_error_required_fields.json; sourceTree = "<group>"; };
+		0229006325866D7100470616 /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
 		0252E444257EEDB900B8040D /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
 		0252E45D258181D600B8040D /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		0252E46225818BCC00B8040D /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 		0229004725841E6B00470616 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				0229006325866D7100470616 /* DetailPresenterTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1331,6 +1334,7 @@
 				0252E46B25818C6400B8040D /* BaseServiceTests.swift in Sources */,
 				0229004925841E8000470616 /* DetailInteractorTests.swift in Sources */,
 				02290038258413DF00470616 /* DetailPresenterMock.swift in Sources */,
+				0229006425866D7100470616 /* DetailPresenterTests.swift in Sources */,
 				0252E4852581923C00B8040D /* HomeViewControllerTests.swift in Sources */,
 				0252E47A25818FE000B8040D /* HomeInteractorMock.swift in Sources */,
 				0252E46325818BCC00B8040D /* XCTestCaseExtension.swift in Sources */,

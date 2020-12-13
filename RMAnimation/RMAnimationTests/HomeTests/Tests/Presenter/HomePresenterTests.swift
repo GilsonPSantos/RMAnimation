@@ -56,7 +56,7 @@ extension HomePresenterTests {
         XCTAssertEqual(self.controllerMock.viewData?.characters.count, 7, "Error - viewData count")
     }
     
-    func test_success_response() {
+    func test_success_viewData() {
         self.serviceMock.fileName = JsonName.CHARACTER_LIST_SUCCESS
         self.interactor.getCharacter(request: self.request)
         XCTAssertTrue(self.controllerMock.calledShowLoading)

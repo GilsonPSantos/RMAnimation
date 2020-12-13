@@ -18,6 +18,7 @@ class DetailInteractorTests: XCTestCase {
     private var interactor: DetailInteractor!
     
     private var response: DetailResponse!
+    private var favoriteResponse: FavoriteRequestResponse!
     
     private let request = DetailRequest(url: "https://rickandmortyapi.com/api/character/1")
     
@@ -37,6 +38,7 @@ class DetailInteractorTests: XCTestCase {
         self.controllerMock = DetailViewControllerMock()
         self.presenterMock = DetailPresenterMock(view: self.controllerMock)
         self.interactor = DetailInteractor(worker: self.serviceMock, presenter: self.presenterMock, favoriteDataBase: dataBaseMock)
+        self.favoriteResponse = FavoriteRequestResponse(id: 1, name: "Rick Sanchez", creationDate: "04/11/2017", imageUrl: "https://rickandmortyapi.com/api/character/avatar/1.jpeg", urlDetail: "https://rickandmortyapi.com/api/character/1")
     }
     
     private func setupResponse() {
@@ -85,6 +87,18 @@ extension DetailInteractorTests {
             XCTAssertEqual(response.location.name, self.response.location.name, "Error - creating location name")
             XCTAssertEqual(response.location.type, self.response.location.type, "Error - creating location type")
             XCTAssertEqual(response.location.dimension, self.response.location.dimension, "Error - creating location dimension")
+        }
+    }
+    
+    func test_success_add_and_fetch_and_remove_in_dataBase() {
+        self.serviceMock.fileName = JsonName.DETAIL_SUCCESS
+        self.interactor.addOrRemoveFavorite(request: self.favoriteResponse)
+        XCTAssertNotNil(self.dataBaseMock.fetchFavoriteList(), "Error - database nil")
+        XCTAssertEqual(self.dataBaseMock.fetchFavoriteList()?.count, 1, "Error - database count")
+        self.interactor.getDetail(request: self.request)
+        self.wait {
+            guard let response = self.presenterMock.response else { XCTFail(); return }
+            XCTAssertTrue(response.isFavorite)
         }
     }
 }
