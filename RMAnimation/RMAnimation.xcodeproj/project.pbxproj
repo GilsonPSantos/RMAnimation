@@ -30,6 +30,12 @@
 		022900522585D7EB00470616 /* detail_with_origin_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 022900512585D7EB00470616 /* detail_with_origin_empty.json */; };
 		022900542585D8C100470616 /* detail_with_location_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 022900532585D8C100470616 /* detail_with_location_empty.json */; };
 		022900562585D8EE00470616 /* location_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 022900552585D8EE00470616 /* location_empty.json */; };
+		0229005825866B0400470616 /* detail_error_error_in_json_structure.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229005725866B0400470616 /* detail_error_error_in_json_structure.json */; };
+		0229005A25866B9D00470616 /* detail_error_required_fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229005925866B9D00470616 /* detail_error_required_fields.json */; };
+		0229005C25866C3800470616 /* detail_with_origin_error_required_fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229005B25866C3800470616 /* detail_with_origin_error_required_fields.json */; };
+		0229005E25866C6200470616 /* origin_error_required_fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229005D25866C6200470616 /* origin_error_required_fields.json */; };
+		0229006025866CAA00470616 /* detail_with_location_error_required_fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229005F25866CAA00470616 /* detail_with_location_error_required_fields.json */; };
+		0229006225866CD000470616 /* location_error_required_fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 0229006125866CD000470616 /* location_error_required_fields.json */; };
 		0252E445257EEDB900B8040D /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E444257EEDB900B8040D /* FavoriteScreen.swift */; };
 		0252E45E258181D600B8040D /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E45D258181D600B8040D /* Identifiers.swift */; };
 		0252E45F258181D600B8040D /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E45D258181D600B8040D /* Identifiers.swift */; };
@@ -145,6 +151,12 @@
 		022900512585D7EB00470616 /* detail_with_origin_empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = detail_with_origin_empty.json; sourceTree = "<group>"; };
 		022900532585D8C100470616 /* detail_with_location_empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = detail_with_location_empty.json; sourceTree = "<group>"; };
 		022900552585D8EE00470616 /* location_empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = location_empty.json; sourceTree = "<group>"; };
+		0229005725866B0400470616 /* detail_error_error_in_json_structure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = detail_error_error_in_json_structure.json; sourceTree = "<group>"; };
+		0229005925866B9D00470616 /* detail_error_required_fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = detail_error_required_fields.json; sourceTree = "<group>"; };
+		0229005B25866C3800470616 /* detail_with_origin_error_required_fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = detail_with_origin_error_required_fields.json; sourceTree = "<group>"; };
+		0229005D25866C6200470616 /* origin_error_required_fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = origin_error_required_fields.json; sourceTree = "<group>"; };
+		0229005F25866CAA00470616 /* detail_with_location_error_required_fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = detail_with_location_error_required_fields.json; sourceTree = "<group>"; };
+		0229006125866CD000470616 /* location_error_required_fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = location_error_required_fields.json; sourceTree = "<group>"; };
 		0252E444257EEDB900B8040D /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
 		0252E45D258181D600B8040D /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		0252E46225818BCC00B8040D /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
@@ -411,6 +423,7 @@
 			children = (
 				0229004425841DF500470616 /* location_success.json */,
 				022900552585D8EE00470616 /* location_empty.json */,
+				0229006125866CD000470616 /* location_error_required_fields.json */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -420,6 +433,7 @@
 			children = (
 				0229004225841DE700470616 /* origin_success.json */,
 				0229004F2585D79600470616 /* origin_empty.json */,
+				0229005D25866C6200470616 /* origin_error_required_fields.json */,
 			);
 			path = Origin;
 			sourceTree = "<group>";
@@ -431,6 +445,10 @@
 				0229004D2585D68C00470616 /* detail_empty.json */,
 				022900512585D7EB00470616 /* detail_with_origin_empty.json */,
 				022900532585D8C100470616 /* detail_with_location_empty.json */,
+				0229005725866B0400470616 /* detail_error_error_in_json_structure.json */,
+				0229005925866B9D00470616 /* detail_error_required_fields.json */,
+				0229005B25866C3800470616 /* detail_with_origin_error_required_fields.json */,
+				0229005F25866CAA00470616 /* detail_with_location_error_required_fields.json */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -1106,14 +1124,20 @@
 			files = (
 				0229004325841DE700470616 /* origin_success.json in Resources */,
 				022900562585D8EE00470616 /* location_empty.json in Resources */,
+				0229005A25866B9D00470616 /* detail_error_required_fields.json in Resources */,
 				0252E48D258279FB00B8040D /* character_empty_list.json in Resources */,
 				0252E487258246E700B8040D /* character_list_success.json in Resources */,
 				022900542585D8C100470616 /* detail_with_location_empty.json in Resources */,
 				0229004125841DD300470616 /* detail_success.json in Resources */,
 				0252E491258296CA00B8040D /* character_error_required_fields.json in Resources */,
+				0229006025866CAA00470616 /* detail_with_location_error_required_fields.json in Resources */,
+				0229005825866B0400470616 /* detail_error_error_in_json_structure.json in Resources */,
+				0229005C25866C3800470616 /* detail_with_origin_error_required_fields.json in Resources */,
 				022900502585D79600470616 /* origin_empty.json in Resources */,
+				0229005E25866C6200470616 /* origin_error_required_fields.json in Resources */,
 				0252E48F2582963300B8040D /* character_error_error_in_json_structure.json in Resources */,
 				022900522585D7EB00470616 /* detail_with_origin_empty.json in Resources */,
+				0229006225866CD000470616 /* location_error_required_fields.json in Resources */,
 				0229004525841DF500470616 /* location_success.json in Resources */,
 				0252E489258277C700B8040D /* character_success_only_one_valid_element_in_the_list.json in Resources */,
 				0229004E2585D68C00470616 /* detail_empty.json in Resources */,

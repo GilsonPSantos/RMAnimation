@@ -129,4 +129,44 @@ extension DetailInteractorTests {
         }
     }
     
+    func test_error_in_serialization() {
+        self.serviceMock.statusService = .success
+        self.serviceMock.fileName = JsonName.DETAIL_ERROR_JSON_STRUCTURE
+        self.interactor.getDetail(request: self.request)
+        self.wait {
+            XCTAssertEqual(self.presenterMock.stateView, StateView.error, "Error - StateView different from error")
+            XCTAssertNil(self.presenterMock.response, "Error - response different from nil")
+        }
+    }
+    
+    func test_error_required_fields_in_detail() {
+        self.serviceMock.statusService = .success
+        self.serviceMock.fileName = JsonName.DETAIL_ERROR_REQUIRED_FIELDS
+        self.interactor.getDetail(request: self.request)
+        self.wait {
+            XCTAssertEqual(self.presenterMock.stateView, StateView.error, "Error - StateView different from error")
+            XCTAssertNil(self.presenterMock.response, "Error - response different from nil")
+        }
+    }
+    
+    func test_error_required_fields_in_origin() {
+        self.serviceMock.statusService = .success
+        self.serviceMock.fileName = JsonName.DETAIL_WITH_ORIGIN_ERROR_REQUIRED_FIELDS
+        self.interactor.getDetail(request: self.request)
+        self.wait {
+            XCTAssertEqual(self.presenterMock.stateView, StateView.error, "Error - StateView different from error")
+            XCTAssertNil(self.presenterMock.response, "Error - response different from nil")
+        }
+    }
+    
+    func test_error_required_fields_in_location() {
+        self.serviceMock.statusService = .success
+        self.serviceMock.fileName = JsonName.DETAIL_WITH_ORIGIN_ERROR_REQUIRED_FIELDS
+        self.interactor.getDetail(request: self.request)
+        self.wait {
+            XCTAssertEqual(self.presenterMock.stateView, StateView.error, "Error - StateView different from error")
+            XCTAssertNil(self.presenterMock.response, "Error - response different from nil")
+        }
+    }
+    
 }

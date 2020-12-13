@@ -20,4 +20,8 @@ struct JsonName {
     
     static let DETAIL_WITH_ORIGIN_EMPTY = "detail_with_origin_empty"
     static let DETAIL_WITH_LOCATION_EMPTY = "detail_with_location_empty"
+    static let DETAIL_ERROR_JSON_STRUCTURE = "detail_error_error_in_json_structure"
+    static let DETAIL_ERROR_REQUIRED_FIELDS = "detail_error_required_fields"
+    static let DETAIL_WITH_ORIGIN_ERROR_REQUIRED_FIELDS = "detail_with_origin_error_required_fields"
+    static let DETAIL_WITH_LOCATION_ERROR_REQUIRED_FIELDS = "detail_with_location_error_required_fields"
 }
