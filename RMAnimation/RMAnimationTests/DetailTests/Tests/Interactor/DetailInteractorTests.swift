@@ -17,7 +17,7 @@ class DetailInteractorTests: XCTestCase {
     private var dataBaseMock: FavoriteDataBaseProtocol!
     private var interactor: DetailInteractor!
     
-    private var lastResponse: DetailResponse!
+    private var response: DetailResponse!
     
     private let request = DetailRequest(url: "https://rickandmortyapi.com/api/character/1")
     
@@ -40,7 +40,9 @@ class DetailInteractorTests: XCTestCase {
     }
     
     private func setupResponse() {
-        
+        let origin = LocationResponse(id: 1, name: "Earth (C-137)", type: "Planet", dimension: "Dimension C-137")
+        let location = LocationResponse(id: 20, name: "Earth (Replacement Dimension)", type: "Planet", dimension: "Replacement Dimension")
+        self.response = DetailResponse(id: 1, name: "Rick Sanchez", urlImage: "https://rickandmortyapi.com/api/character/avatar/1.jpeg", urlOrigin: "origin_success", urlLocation: "location_success", origin: origin, location: location, isFavorite: false, urlDetail: "https://rickandmortyapi.com/api/character/1")
     }
 
 }
@@ -56,6 +58,35 @@ extension DetailInteractorTests {
             XCTAssertNotNil(self.presenterMock.response?.location, "Error - location nil")
             XCTAssertNotNil(self.presenterMock.response?.origin, "Error - origin nil")
         }
+    }
+    
+    func test_success_response() {
+        self.serviceMock.fileName = JsonName.DETAIL_SUCCESS
+        self.interactor.getDetail(request: self.request)
+        XCTAssertTrue(self.presenterMock.calledStartRequest)
+        self.wait {
+            
+            guard let response = self.presenterMock.response else { XCTFail(); return }
+            
+            XCTAssertEqual(response.id, self.response.id, "Error - creating id")
+            XCTAssertEqual(response.name, self.response.name, "Error - creating name")
+            XCTAssertEqual(response.urlImage, self.response.urlImage, "Error - creating urlImage")
+            XCTAssertEqual(response.urlOrigin, self.response.urlOrigin, "Error - creating urlOrigin")
+            XCTAssertEqual(response.urlLocation, self.response.urlLocation, "Error - creating urlLocation")
+            XCTAssertEqual(response.isFavorite, self.response.isFavorite, "Error - creating isFavorite")
+            XCTAssertEqual(response.urlDetail, self.response.urlDetail, "Error - creating urlDetail")
+            
+            XCTAssertEqual(response.origin.id, self.response.origin.id, "Error - creating origin id")
+            XCTAssertEqual(response.origin.name, self.response.origin.name, "Error - creating origin name")
+            XCTAssertEqual(response.origin.type, self.response.origin.type, "Error - creating origin type")
+            XCTAssertEqual(response.origin.dimension, self.response.origin.dimension, "Error - creating origin dimension")
+            
+            XCTAssertEqual(response.location.id, self.response.location.id, "Error - creating location id")
+            XCTAssertEqual(response.location.name, self.response.location.name, "Error - creating location name")
+            XCTAssertEqual(response.location.type, self.response.location.type, "Error - creating location type")
+            XCTAssertEqual(response.location.dimension, self.response.location.dimension, "Error - creating location dimension")
+        }
+        
     }
 }
 
