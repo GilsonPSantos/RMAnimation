@@ -46,4 +46,4 @@ Devido ao curto tempo nem sempre conseguimos implementar tudo da forma que gosta
 
 ### Créditos:
 
-GPSFoot foi desenvolvido por Gilson Santos (gilsonsantosti@gmail.com)
+RMAnimation foi desenvolvido por Gilson Santos (gilsonsantosti@gmail.com)
