@@ -15,6 +15,7 @@ final class DetailInteractor {
     private let presenter: DetailPresenterProtocol?
     private var response = DetailResponse()
     private let dataBase: FavoriteDataBaseProtocol
+    private var isErrorService = false
     
     init(worker: BaseWorkerProtocol, presenter: DetailPresenterProtocol, favoriteDataBase: FavoriteDataBaseProtocol) {
         self.worker = worker
@@ -40,7 +41,7 @@ extension DetailInteractor: DetailInteractorProtocol {
             self.getLocationInfo(url: self.response.urlOrigin, dispatchGroup: dispatchGroup, isOrigin: true)
             
             dispatchGroup.notify(queue: .main) {
-                if self.isValidResponse(self.response) {
+                if !self.isErrorService, self.isValidResponse(self.response) {
                     self.presenter?.handlerSuccess(response: self.response)
                 } else {
                     self.presenter?.handlerError()
@@ -60,7 +61,7 @@ extension DetailInteractor: DetailInteractorProtocol {
             case .success(let resultModel):
                 strongSelf.response = strongSelf.createCharacterResponse(resultModel)
             case .failure(_):
-                strongSelf.presenter?.handlerError()
+                strongSelf.isErrorService = true
             }
             semaphore.signal()
         }
@@ -81,7 +82,7 @@ extension DetailInteractor: DetailInteractorProtocol {
                     strongSelf.response.location = locationResponse
                 }
             case .failure(_):
-                strongSelf.presenter?.handlerError()
+                strongSelf.isErrorService = true
             }
             dispatchGroup.leave()
         }

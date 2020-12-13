@@ -86,11 +86,19 @@ extension DetailInteractorTests {
             XCTAssertEqual(response.location.type, self.response.location.type, "Error - creating location type")
             XCTAssertEqual(response.location.dimension, self.response.location.dimension, "Error - creating location dimension")
         }
-        
     }
 }
 
 // MARK: - ERROR TESTS -
 extension DetailInteractorTests {
     
+    func test_error_generic() {
+        self.serviceMock.statusService = .error(.genericError)
+        self.serviceMock.fileName = JsonName.DETAIL_SUCCESS
+        self.interactor.getDetail(request: self.request)
+        self.wait {
+            XCTAssertEqual(self.presenterMock.stateView, StateView.error, "Error - StateView different from error")
+            XCTAssertNil(self.presenterMock.response, "Error - response different from nil")
+        }
+    }
 }
