@@ -39,6 +39,7 @@ Devido ao curto tempo nem sempre conseguimos implementar tudo da forma que gosta
 
 - Melhorias no layout considerando um melhor conceito de UX e UI;
 - Aumento na cobertura dos testes, tanto unitários quanto de interfaces;
+- Implementação dos testes unitários para o fluxo de favoritos;
 - Criação de mais funções com o intuíto de abstrair mais todo o código responsável pela configuração das constraints, reduzindo a quantidade de código e melhorando seu reaproveitamento;
 - Melhorias no layout para uma melhor experiência no darkmode;
 - Modularização de mais componentes para que sejam reaproveitáveis.
