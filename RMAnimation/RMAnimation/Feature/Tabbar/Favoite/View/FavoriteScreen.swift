@@ -10,11 +10,12 @@ import UIKit
 
 class FavoriteScreen: UIView {
 
-   lazy var favoriteTableView: UITableView = {
-       let tableView = UITableView()
-       tableView.separatorStyle = .none
-       return tableView
-   }()
+    lazy var favoriteTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.separatorStyle = .none
+        tableView.accessibilityIdentifier = Identifiers.favoriteTableView
+        return tableView
+    }()
     
     lazy var labelMessage: UILabel = {
         let label = UILabel()
@@ -22,6 +23,7 @@ class FavoriteScreen: UIView {
         label.font = .systemFont(ofSize: 20)
         label.textAlignment = .center
         label.numberOfLines = 0
+        label.accessibilityIdentifier = Identifiers.labelMessageEmpty
         return label
     }()
    

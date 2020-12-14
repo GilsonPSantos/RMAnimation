@@ -15,6 +15,7 @@ class ErrorScreen: UIView {
         imageView.image = UIImage(systemName: "goforward")
         imageView.tintColor = self.isDarkMode() ? #colorLiteral(red: 0.4235294163, green: 0.7529411912, blue: 0.2901960909, alpha: 1) : .darkGray
         imageView.contentMode = .scaleAspectFit
+        imageView.accessibilityIdentifier = Identifiers.imageReload
         return imageView
     }()
     
@@ -25,6 +26,7 @@ class ErrorScreen: UIView {
         label.font = .systemFont(ofSize: 20)
         label.textAlignment = .center
         label.numberOfLines = 2
+        label.accessibilityIdentifier = Identifiers.labelMessageError
         return label
     }()
     
@@ -52,6 +54,7 @@ extension ErrorScreen: ScreenViewProtocol {
     }
     
     func setupAdditional() {
+        self.accessibilityIdentifier = Identifiers.errorView
         self.backgroundColor = .systemBackground
     }
 }

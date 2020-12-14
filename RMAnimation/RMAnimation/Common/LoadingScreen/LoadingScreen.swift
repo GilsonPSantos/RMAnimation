@@ -16,6 +16,7 @@ class LoadingScreen: UIView {
         activityIndicator.hidesWhenStopped = true
         activityIndicator.style = .large
         activityIndicator.startAnimating()
+        activityIndicator.accessibilityIdentifier = Identifiers.loadingIndicator
         return activityIndicator
     }()
 
@@ -41,6 +42,7 @@ extension LoadingScreen: ScreenViewProtocol {
     }
     
     func setupAdditional() {
+        self.accessibilityIdentifier = Identifiers.loadingView
         self.backgroundColor = .systemBackground
     }
 }

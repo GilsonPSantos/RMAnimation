@@ -27,6 +27,7 @@ final class FavoriteCoordinator: FavoriteCoordinatorProtocol {
         controller.coordinator = self
         controller.title = "FAVORITOS"
         controller.tabBarItem = UITabBarItem(title: "Favoritos", image: UIImage(systemName: "star"), tag: 1)
+        controller.tabBarItem.accessibilityIdentifier = Identifiers.tabbarFavoriteItem
         self.navigationController.pushViewController(controller, animated: true)
         
     }
