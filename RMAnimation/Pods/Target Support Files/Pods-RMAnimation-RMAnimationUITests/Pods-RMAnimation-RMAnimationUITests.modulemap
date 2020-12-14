@@ -1,0 +1,6 @@
+framework module Pods_RMAnimation_RMAnimationUITests {
+  umbrella header "Pods-RMAnimation-RMAnimationUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

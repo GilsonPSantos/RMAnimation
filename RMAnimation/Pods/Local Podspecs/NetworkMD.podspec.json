@@ -1,0 +1,33 @@
+{
+  "name": "NetworkMD",
+  "platforms": {
+    "ios": "13.0"
+  },
+  "swift_versions": "5.0",
+  "version": "1.0.1",
+  "summary": "A short description of NetworkMD.",
+  "requires_arc": true,
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Gilson Santos/NetworkMD",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Gilson Santos": "gilsonsantosti@gmail.com"
+  },
+  "source": {
+    "git": "https://gilsonsantosti@bitbucket.org/gilsonsantosti/networkmd.git",
+    "tag": "1.0.1"
+  },
+  "source_files": "NetworkMD/BaseProject/**/*.{swift}",
+  "resources": "NetworkMD/BaseProject/**/*.{storyboard,xib,xcassets,json,xcdatamodeld}",
+  "testspecs": [
+    {
+      "name": "Tests",
+      "test_type": "unit",
+      "source_files": "NetworkMD/Tests/**/*.{swift}"
+    }
+  ],
+  "swift_version": "5.0"
+}

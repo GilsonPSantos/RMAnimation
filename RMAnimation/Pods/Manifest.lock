@@ -1,0 +1,21 @@
+PODS:
+  - NetworkMD (1.0.1)
+
+DEPENDENCIES:
+  - "NetworkMD (from `https://gilsonsantosti@bitbucket.org/gilsonsantosti/networkmd.git`)"
+
+EXTERNAL SOURCES:
+  NetworkMD:
+    :git: "https://gilsonsantosti@bitbucket.org/gilsonsantosti/networkmd.git"
+
+CHECKOUT OPTIONS:
+  NetworkMD:
+    :commit: 63b467cd1cfbe0f4800616ef6e5b78c7cd44b943
+    :git: "https://gilsonsantosti@bitbucket.org/gilsonsantosti/networkmd.git"
+
+SPEC CHECKSUMS:
+  NetworkMD: d2a39aae28c77c09a564fb9751d00abd14626c9e
+
+PODFILE CHECKSUM: efd2bda7f7d1690ebab049dd91b7cef9c34610fc
+
+COCOAPODS: 1.9.3
