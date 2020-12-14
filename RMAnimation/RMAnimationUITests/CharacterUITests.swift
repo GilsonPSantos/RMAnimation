@@ -18,6 +18,23 @@ class CharacterUITests: BaseUITests {
     private var imageArrow: XCUIElement!
     private var labelName: XCUIElement!
     private var labelCreationDate: XCUIElement!
+    
+    private var imageBanner: XCUIElement!
+    
+    private var labelTitleNameOrigin: XCUIElement!
+    private var labelValueNameOrigin: XCUIElement!
+    private var labelTitleTypeOrigin: XCUIElement!
+    private var labelValueTypeOrigin: XCUIElement!
+    private var labelTitleDimensionOrigin: XCUIElement!
+    private var labelValueDimensionOrigin: XCUIElement!
+    
+    private var labelTitleNameLocation: XCUIElement!
+    private var labelValueNameLocation: XCUIElement!
+    private var labelTitleTypeLocation: XCUIElement!
+    private var labelValueTypeLocation: XCUIElement!
+    private var labelTitleDimensionLocation: XCUIElement!
+    private var labelValueDimensionLocation: XCUIElement!
+    
 
     override func setUp() {
         self.setupElements()
@@ -34,6 +51,15 @@ class CharacterUITests: BaseUITests {
         
         self.labelName = self.firstHomeCell.staticTexts[Identifiers.labelNameCharacter]
         self.labelCreationDate = self.firstHomeCell.staticTexts[Identifiers.labelDateCharacter]
+        
+        self.imageBanner = self.app.images[Identifiers.imageBannerDetail]
+        self.labelTitleNameOrigin = app.staticTexts[Identifiers.labelTitleNameDetail]
+        self.labelValueNameOrigin = app.staticTexts[Identifiers.labelNameDetail]
+        
+        self.labelTitleTypeOrigin = app.staticTexts[Identifiers.labelTitleTypeDetail]
+        self.labelValueTypeOrigin = app.staticTexts[Identifiers.labelTypeDetail]
+        
+        
     }
 
 }
@@ -62,6 +88,14 @@ extension CharacterUITests {
     func test_see_detail_screen() {
         self.firstHomeCell.tap()
         self.iSeeScreenTitle(title: self.labelName.label)
+    }
+    
+    func test_see_elements_detail_screen() {
+        self.firstHomeCell.tap()
+//        XCTAssertEqual(self.labelName.label, "Rick Sanchez")
+//        XCTAssertEqual(self.labelCreationDate.label, "Criado em 04/11/2017")
+        XCTAssertTrue(self.imageBanner.exists)
+//        XCTAssertTrue(self.imageArrow.exists)
     }
     
 }

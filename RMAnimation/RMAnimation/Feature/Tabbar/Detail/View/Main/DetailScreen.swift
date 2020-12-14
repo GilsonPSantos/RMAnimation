@@ -12,8 +12,8 @@ class DetailScreen: UIView {
     
     let errorView = ErrorScreen()
     let loadingView = LoadingScreen()
-    let descriptionOrigin = DescriptionScreen()
-    let descriptionLocation = DescriptionScreen()
+    let descriptionOrigin = DescriptionScreen(isOrigin: true)
+    let descriptionLocation = DescriptionScreen(isOrigin: false)
     
     lazy var imageBanner: UIImageView = {
         let imageView = UIImageView()

@@ -18,7 +18,6 @@ class DescriptionScreen: UIView {
         label.numberOfLines = 1
         label.backgroundColor = .systemPink
         label.text = "Origin:"
-        label.accessibilityIdentifier = Identifiers.labelTitleDetail
         return label
     }()
     
@@ -29,7 +28,6 @@ class DescriptionScreen: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.backgroundColor = .systemPink
-        label.accessibilityIdentifier = Identifiers.labelTitleNameDetail
         return label
     }()
     
@@ -39,7 +37,6 @@ class DescriptionScreen: UIView {
         label.font = .boldSystemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
-        label.accessibilityIdentifier = Identifiers.labelNameDetail
         return label
     }()
     
@@ -50,7 +47,6 @@ class DescriptionScreen: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.backgroundColor = .systemPink
-        label.accessibilityIdentifier = Identifiers.labelTitleTypeDetail
         return label
     }()
     
@@ -60,7 +56,6 @@ class DescriptionScreen: UIView {
         label.font = .boldSystemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
-        label.accessibilityIdentifier = Identifiers.labelTypeDetail
         return label
     }()
     
@@ -71,7 +66,6 @@ class DescriptionScreen: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.backgroundColor = .systemPink
-        label.accessibilityIdentifier = Identifiers.labelTitleDimensionDetail
         return label
     }()
     
@@ -81,9 +75,10 @@ class DescriptionScreen: UIView {
         label.font = .boldSystemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
-        label.accessibilityIdentifier = Identifiers.labelDimensionDetail
         return label
     }()
+    
+    private var isOrigin = false
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -92,6 +87,12 @@ class DescriptionScreen: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        self.setupView()
+    }
+    
+    init(isOrigin: Bool) {
+        super.init(frame: UIScreen.main.bounds)
+        self.isOrigin = isOrigin
         self.setupView()
     }
 }
@@ -137,6 +138,19 @@ extension DescriptionScreen: ScreenViewProtocol {
     }
     
     func setupAdditional() {
+        self.labelTitle.accessibilityIdentifier = Identifiers.labelTitleDetail + (isOrigin ? "origin" : "location")
+        self.labelTitleName.accessibilityIdentifier = Identifiers.labelTitleNameDetail + (isOrigin ? "origin" : "location")
+        self.labelName.accessibilityIdentifier = Identifiers.labelNameDetail + (isOrigin ? "origin" : "location")
+        self.labelTitleType.accessibilityIdentifier = Identifiers.labelTitleTypeDetail + (isOrigin ? "origin" : "location")
+        self.labelType.accessibilityIdentifier = Identifiers.labelTypeDetail + (isOrigin ? "origin" : "location")
+        self.labelTitleDimension.accessibilityIdentifier = Identifiers.labelTitleDimensionDetail + (isOrigin ? "origin" : "location")
+        self.labelDimension.accessibilityIdentifier = Identifiers.labelDimensionDetail + (isOrigin ? "origin" : "location")
         
+        let backgroundColor: UIColor = isOrigin ? .systemPink : .orange
+        
+        self.labelTitle.backgroundColor = backgroundColor
+        self.labelTitleName.backgroundColor = backgroundColor
+        self.labelTitleType.backgroundColor = backgroundColor
+        self.labelTitleDimension.backgroundColor = backgroundColor
     }
 }
