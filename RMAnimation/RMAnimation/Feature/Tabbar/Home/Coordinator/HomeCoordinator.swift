@@ -28,6 +28,7 @@ final class HomeCoordinator: HomeCoordinatorProtocol {
         controller.coordinator = self
         controller.title = "Lista de Personagens"
         controller.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
+        controller.tabBarItem.accessibilityIdentifier = Identifiers.tabbarHomeItem
         self.setupNavigation()
         self.navigationController.pushViewController(controller, animated: true)
     }

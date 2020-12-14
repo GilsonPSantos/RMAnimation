@@ -15,7 +15,7 @@ final class DetailDataBaseMock: FavoriteDataBaseProtocol {
     
     func saveOrRemoveFavorite(request: FavoriteRequestResponse) {
         if let favoriteList = self.dataBase, let index = favoriteList.firstIndex(where: { request.id == $0.id}) {
-            self.dataBase?.remove(at: index)
+            self.removeFavorite(id: index)
             if self.dataBase?.count == 0 {
                 self.dataBase = nil
             }
@@ -37,5 +37,9 @@ final class DetailDataBaseMock: FavoriteDataBaseProtocol {
     
     func fetchFavoriteList() -> [Favorite]? {
         self.dataBase
+    }
+    
+    func removeFavorite(id: Int) {
+        self.dataBase?.remove(at: id)
     }
 }

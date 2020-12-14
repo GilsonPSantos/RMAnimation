@@ -9,6 +9,9 @@
 import Foundation
 
 struct Identifiers {
+    static let tabbarFavoriteItem = "tabbar_favorite_item"
+    static let tabbarHomeItem = "tabbar_home_item"
+    
     //MARK: - HOME -
     static let homeTableView = "home_tableView"
     static let homeTableViewCell = "home_tableView_cell"
@@ -33,6 +36,7 @@ struct Identifiers {
     static let favoriteTableView = "favorite_tableView"
     static let favoriteTableViewCell = "favorite_tableView_cell"
     static let labelMessageEmpty = "label_message_empty"
+    static let buttonAddFavorite = "button_add_favorite"
     
     //MARK: - LOADING -
     static let loadingView = "loading_view"

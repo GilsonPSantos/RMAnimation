@@ -109,6 +109,7 @@ extension DetailViewController {
     
     private func setupNavigation() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: #selector(self.addOrRemoveFavorite))
+        self.navigationItem.rightBarButtonItem?.accessibilityIdentifier = Identifiers.buttonAddFavorite
     }
     
     private func addGesture() {
