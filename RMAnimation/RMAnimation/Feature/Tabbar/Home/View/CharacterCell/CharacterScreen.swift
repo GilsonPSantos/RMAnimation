@@ -47,7 +47,6 @@ class CharacterScreen: UIView {
     public lazy var imageArrow: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.isAccessibilityElement = true
         imageView.tintColor = .systemOrange
         imageView.image = UIImage(systemName: "chevron.right")
         imageView.accessibilityIdentifier = Identifiers.imageArrowCharacter
