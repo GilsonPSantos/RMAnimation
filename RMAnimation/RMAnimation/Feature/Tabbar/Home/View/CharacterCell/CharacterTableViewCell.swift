@@ -46,5 +46,10 @@ extension CharacterTableViewCell {
         self.characterScreen.labelName.text = viewData.name
         self.characterScreen.labelDate.text = viewData.creationDate
         self.characterScreen.imageCharacter.downloadImage(urlString: viewData.imageUrl, keyImage: viewData.name)
+        self.setupuAccessibility(viewData: viewData)
+    }
+    
+    private func setupuAccessibility(viewData: CharacterViewData) {
+        self.characterScreen.imageCharacter.accessibilityLabel = "Imagem do personagem \(viewData.name)"
     }
 }
