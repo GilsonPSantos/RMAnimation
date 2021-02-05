@@ -14,6 +14,7 @@ class CharacterScreen: UIView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.isAccessibilityElement = true
+        imageView.accessibilityTraits = .image
         imageView.backgroundColor = .blue
         imageView.accessibilityIdentifier = Identifiers.imageCharacter
         return imageView
@@ -22,9 +23,11 @@ class CharacterScreen: UIView {
     let labelName: UILabel = {
         let label = UILabel()
         label.textColor = .systemOrange
-        label.font = .boldSystemFont(ofSize: 16)
+        label.font = .preferredFont(forTextStyle: .title3)
         label.textAlignment = .left
         label.numberOfLines = 1
+        label.isAccessibilityElement = true
+        label.accessibilityTraits = .staticText
         label.accessibilityIdentifier = Identifiers.labelNameCharacter
         return label
     }()
@@ -32,9 +35,11 @@ class CharacterScreen: UIView {
     let labelDate: UILabel = {
         let label = UILabel()
         label.textColor = .systemOrange
-        label.font = .systemFont(ofSize: 12)
+        label.font = .preferredFont(forTextStyle: .footnote)
         label.textAlignment = .left
         label.numberOfLines = 1
+        label.isAccessibilityElement = true
+        label.accessibilityTraits = .staticText
         label.accessibilityIdentifier = Identifiers.labelDateCharacter
         return label
     }()
